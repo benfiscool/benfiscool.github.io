@@ -93,7 +93,7 @@ export function Hero() {
               >
                 <div className="relative w-80 h-96 rounded-2xl overflow-hidden border-2 border-stark-400/30 shadow-2xl">
                   <Image
-                    src="/img_4332.jpg"
+                    src="/portrait.jpg"
                     alt="Benjamin Freeman"
                     fill
                     style={{ objectFit: 'cover' }}
