@@ -37,6 +37,17 @@ const blogPosts = [
     category: 'Projects',
     tags: ['DIY', 'Electric Vehicle', 'PID Control', 'VESC', 'Fabrication'],
     featured: false
+  },
+  {
+    id: 4,
+    title: 'CNC Machined Custom Shift Knob',
+    excerpt: 'Learning CNC machining through hands-on experience creating a custom aluminum shift knob using both lathe and mill operations in a machine shop class.',
+    content: 'Full content here...',
+    date: '2024-09-20',
+    readTime: '4 min read',
+    category: 'Projects',
+    tags: ['CNC Machining', 'Lathe', 'Mill', 'Aluminum', 'CAM Programming'],
+    featured: false
   }
 ]
 
