@@ -9,7 +9,7 @@ export default function ResumePage() {
         {/* Download Button */}
         <div className="flex justify-center mb-8">
           <a 
-            href="/Ben Freeman ME-2.pdf" 
+            href="/Benjamin Freeman ME Resume.pdf" 
             download
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-300 flex items-center gap-2"
           >
@@ -26,21 +26,21 @@ export default function ResumePage() {
             <h2 className="text-2xl font-bold mb-4 text-blue-400">Benjamin Freeman</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300">
               <div>
-                <p><span className="font-semibold">Email:</span> FreemB10@my.erau.edu</p>
+                <p><span className="font-semibold">Email:</span> <a href="mailto:freemb10@my.erau.edu" className="text-blue-400 hover:text-blue-300">freemb10@my.erau.edu</a></p>
                 <p><span className="font-semibold">Phone:</span> (602) 617-3531</p>
               </div>
               <div>
-                <p><span className="font-semibold">Location:</span> Prescott, Arizona</p>
-                <p><span className="font-semibold">LinkedIn:</span> <a href="https://www.linkedin.com/in/bcfreem" className="text-blue-400 hover:text-blue-300">in/bcfreem</a></p>
+                <p><span className="font-semibold">Location:</span> Scottsdale, AZ</p>
+                <p><span className="font-semibold">Citizenship:</span> U.S. Citizen</p>
               </div>
             </div>
           </div>
 
           {/* Summary */}
           <div className="card-glass p-8">
-            <h2 className="text-2xl font-bold mb-4 text-blue-400">Professional Summary</h2>
+            <h2 className="text-2xl font-bold mb-4 text-blue-400">Summary</h2>
             <p className="text-gray-300 leading-relaxed">
-              Motivated and detail-oriented Mechanical Engineering student with a focus on propulsion, seeking a summer internship to gain hands-on experience in Mechanical or Aerospace Engineering.
+              Detail-oriented Mechanical Engineering student with a 3.9 GPA and a strong foundation in fabrication, CAD design, welding, and machining. Experienced in hands-on workshop environments through academic and industry roles. Passionate about engineering and eager to contribute to campus shop operations through safe, efficient, and high-quality work.
             </p>
           </div>
 
@@ -49,12 +49,11 @@ export default function ResumePage() {
             <h2 className="text-2xl font-bold mb-6 text-blue-400">Education</h2>
             <div className="space-y-4">
               <div>
-                <h3 className="text-xl font-semibold text-white">Bachelor of Science in Mechanical Engineering (Current)</h3>
-                <p className="text-blue-300">Embry-Riddle Aeronautical University • Prescott, AZ</p>
-                <p className="text-gray-400">2024 • Expected Graduation: May 2026</p>
+                <h3 className="text-xl font-semibold text-white">B.S. Mechanical Engineering, Propulsion</h3>
+                <p className="text-blue-300">Embry – Riddle Aeronautical University • Prescott, AZ</p>
+                <p className="text-gray-400">Graduation – May 2026</p>
                 <ul className="mt-2 text-gray-300">
-                  <li>• Concentration: Propulsion</li>
-                  <li>• GPA: 3.89</li>
+                  <li>• GPA: 3.9</li>
                 </ul>
               </div>
             </div>
@@ -62,40 +61,63 @@ export default function ResumePage() {
 
           {/* Experience */}
           <div className="card-glass p-8">
-            <h2 className="text-2xl font-bold mb-6 text-blue-400">Professional Experience</h2>
+            <h2 className="text-2xl font-bold mb-6 text-blue-400">Experience</h2>
             <div className="space-y-6">
               
               <div>
-                <h3 className="text-xl font-semibold text-white">Product Design</h3>
+                <h3 className="text-xl font-semibold text-white">Machining Assistant</h3>
+                <p className="text-blue-300">ERAU Campus Machine Shop (AXFAB) • Prescott, AZ</p>
+                <p className="text-gray-400">Aug 2025 - Present</p>
+                <ul className="mt-2 space-y-1 text-gray-300">
+                  <li>• Produce parts from conception to completion using CAD, CAM, and CNC/manual lathes and mills.</li>
+                  <li>• Assist students in best practices and safe operation of manual and CNC machines.</li>
+                  <li>• Monitor the machine shop for safety and cleanliness, and intervene when necessary.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-white">Product Designer</h3>
                 <p className="text-blue-300">Dyno-Comp Performance Tuning • Scottsdale, AZ</p>
-                <p className="text-gray-400">May 2024 - August 2024</p>
+                <p className="text-gray-400">May 2024 – Aug 2025</p>
                 <ul className="mt-2 space-y-1 text-gray-300">
-                  <li>• Conducted 3D scanning of vehicles to develop customized aerodynamic packages which optimize airflow for better cooling and vehicle handling.</li>
-                  <li>• Applied Computational Fluid Dynamics (CFD) analysis to validate the aerodynamic effectiveness of designs.</li>
-                  <li>• Designed and 3D printed one-off parts to customer specifications.</li>
+                  <li>• Conducted 3D scans and CFD analysis to improve the cooling and aerodynamics of performance vehicles.</li>
+                  <li>• Designed and 3D-printed custom components to customer specifications.</li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-white">Design and Fabrication (Part-time)</h3>
+                <h3 className="text-xl font-semibold text-white">Fabricator</h3>
                 <p className="text-blue-300">Accessory Partners • Scottsdale, AZ</p>
-                <p className="text-gray-400">May 2023 - August 2023</p>
+                <p className="text-gray-400">May 2023 – Aug 2023</p>
                 <ul className="mt-2 space-y-1 text-gray-300">
-                  <li>• Leveraged CAD software and 3D scanning technology to design and prototype custom automotive components including sunroof and suspension components</li>
-                  <li>• Manufactured parts for automotive sunroofs in a shop environment</li>
-                  <li>• Reverse-engineered parts which are no longer available for vintage vehicles</li>
-                  <li>• Worked with colleagues to design application-specific jigs for ease of manufacturing</li>
+                  <li>• Used CAD and 3D scanning to prototype components for sunroof and suspension systems.</li>
+                  <li>• Manufactured metal and plastic parts in a hands-on shop environment.</li>
+                  <li>• Reverse-engineered legacy parts for vintage vehicles.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Projects & Leadership */}
+          <div className="card-glass p-8">
+            <h2 className="text-2xl font-bold mb-6 text-blue-400">Projects & Leadership</h2>
+            <div className="space-y-6">
+              
+              <div>
+                <h3 className="text-xl font-semibold text-white">Foil Bearing Endurance and Analysis Rig – Capstone (Sponsored by Honeywell)</h3>
+                <ul className="mt-2 space-y-1 text-gray-300">
+                  <li>• Designing a test rig to evaluate wear on foil bearings for use in auxiliary power units (APUs)</li>
+                  <li>• Collaborate with a team of seven to evaluate project requirements, scope, and produce a viable product within budget.</li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-white">Data Entry Associate</h3>
-                <p className="text-blue-300">Accessory Partners • Scottsdale, AZ</p>
-                <p className="text-gray-400">February 2022 - September 2022</p>
+                <h3 className="text-xl font-semibold text-white">President, ERAU Eagle Makerspace</h3>
+                <p className="text-blue-300">Prescott, AZ</p>
                 <ul className="mt-2 space-y-1 text-gray-300">
-                  <li>• Collaborated with a team to input and manipulate large datasets</li>
-                  <li>• Automated data formatting and organization using formulas and macros in Excel</li>
-                  <li>• Gained an extensive knowledge of excel including functions and formatting</li>
+                  <li>• Responsible for onboarding and training monitors who oversee the space</li>
+                  <li>• Train members on safe and proper use of shop tools and machinery</li>
+                  <li>• Operate and maintain a variety of machinery including a lathe, mill, ShopBot CNC router, and several band saws.</li>
                 </ul>
               </div>
             </div>
@@ -116,22 +138,6 @@ export default function ResumePage() {
             </div>
           </div>
 
-          {/* Relevant Coursework */}
-          <div className="card-glass p-8">
-            <h2 className="text-2xl font-bold mb-6 text-blue-400">Relevant Coursework</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300">
-              <ul className="space-y-2">
-                <li>• ME309 – Air-breathing and Rocket Propulsion</li>
-                <li>• ES206 - Fluid Mechanics</li>
-                <li>• ES204 - Dynamics</li>
-                <li>• EGR201 – Solidworks</li>
-              </ul>
-              <ul className="space-y-2">
-                <li>• EGR115 – Matlab</li>
-                <li>• ES208 - Thermodynamics</li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
     </div>

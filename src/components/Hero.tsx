@@ -80,7 +80,7 @@ export function Hero() {
                   transition={{ delay: 1.4, duration: 0.6 }}
                 >
                   Senior at <span className="text-stark-400 font-semibold">Embry-Riddle Aeronautical University</span> 
-                  {' '}specializing in <span className="text-stark-400 font-semibold">jet engine propulsion systems</span>. 
+                  {' '}specializing in <span className="text-stark-400 font-semibold">propulsion systems</span>. 
                   Passionate about pushing the boundaries of aerospace engineering.
                 </motion.p>
               </div>
