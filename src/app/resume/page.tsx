@@ -1,3 +1,5 @@
+import { CapstonePopup } from '@/components/CapstonePopup'
+
 export default function ResumePage() {
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 pt-20">
@@ -140,6 +142,9 @@ export default function ResumePage() {
 
         </div>
       </div>
+      
+      {/* Capstone Popup */}
+      <CapstonePopup />
     </div>
   )
 }

@@ -48,10 +48,21 @@ const blogPosts = [
     category: 'Projects',
     tags: ['CNC Machining', 'Lathe', 'Mill', 'Aluminum', 'CAM Programming'],
     featured: false
+  },
+  {
+    id: 5,
+    title: 'Senior Capstone: Honeywell Aerospace Project',
+    excerpt: 'My senior capstone project sponsored by Honeywell, focusing on cutting-edge aerospace technology and engineering innovation.',
+    content: 'Full content here...',
+    date: '2025-08-30',
+    readTime: '10 min read',
+    category: 'Capstone',
+    tags: ['Honeywell', 'Aerospace', 'Capstone', 'Senior Project', 'Engineering'],
+    featured: true
   }
 ]
 
-const categories = ['All', 'Projects']
+const categories = ['All', 'Projects', 'Capstone']
 
 export default function BlogPage() {
   const featuredPosts = blogPosts.filter(post => post.featured)

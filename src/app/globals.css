@@ -37,6 +37,36 @@
     @apply text-stark-400;
     text-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
   }
+
+  .streamline-container {
+    @apply relative overflow-hidden;
+  }
+
+  .streamline {
+    @apply absolute h-px bg-gradient-to-r from-transparent via-stark-400/60 to-transparent pointer-events-none;
+    width: 200%;
+  }
+
+  .streamline-top {
+    top: -8px;
+    animation-delay: 0s;
+  }
+
+  .streamline-middle {
+    top: 50%;
+    transform: translateY(-50%);
+    animation-delay: 2s;
+  }
+
+  .streamline-bottom {
+    bottom: -8px;
+    animation-delay: 4s;
+  }
+
+  .particle {
+    @apply absolute w-1 h-1 bg-stark-400 rounded-full pointer-events-none;
+    box-shadow: 0 0 4px rgba(14, 165, 233, 0.8);
+  }
   
   .arc-reactor {
     @apply relative w-16 h-16 rounded-full bg-stark-500 border-2 border-stark-300;

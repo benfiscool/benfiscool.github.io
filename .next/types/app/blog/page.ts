@@ -1,4 +1,4 @@
-// File: C:\Users\benfi\Desktop\website backup\src\app\blog\page.tsx
+// File: C:\Users\Ben\OneDrive - Embry-Riddle Aeronautical University\Documents\benfiscool.github.io\src\app\blog\page.tsx
 import * as entry from '../../../../src/app/blog/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

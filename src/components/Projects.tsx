@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowRight, Calendar } from 'lucide-react'
+import { StreamlineHeading } from './StreamlineHeading'
 
 // This should match the blog posts from your blog page
 const featuredProjects = [
@@ -20,15 +21,16 @@ export function Projects() {
   return (
     <section className="py-20 px-6">
       <div className="container mx-auto max-w-6xl">
-        <motion.h2 
-          className="text-4xl md:text-5xl font-bold text-center mb-16 glow-text"
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Featured Projects
-        </motion.h2>
+          <StreamlineHeading className="text-4xl md:text-5xl font-bold text-center mb-16 glow-text">
+            Featured Projects
+          </StreamlineHeading>
+        </motion.div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProjects.map((project, index) => (

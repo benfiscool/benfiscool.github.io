@@ -7,6 +7,7 @@ export function generateStaticParams() {
     { id: '2' },
     { id: '3' },
     { id: '4' },
+    { id: '5' },
     // Add more IDs here as you create more blog posts
   ]
 }
@@ -21,26 +22,49 @@ const blogPostData = {
     category: 'Projects',
     tags: ['Restoration', 'CNC', '3D Scanning', 'Reverse Engineering'],
     content: `
-      <p>Sometime in the early nineties, my dad brought home a 1968 Datsun Roadster and parked it in our backyard. There it sat for 30 years until he and I dug it out during my sophomore year of high school with plans of a full restoration. My goal at the time was to drive my girlfriend to senior prom in it. While that did not happen (not even close), it has turned out to be the most rewarding project I have worked on with all sorts of fun challenges along the way.</p>
-      
-      <p>I could write a book on all of the learnings along the way, so I'll spare you the boring bits about body filler and redoing the electrical harness, and rather talk about the fun part – the dashboard! You'll have to hear me out…</p>
+      <p>Sometime in the early nineties, my dad brought home a 1968 Datsun Roadster and parked it in our backyard. There it sat for 30 years until he and I dug it out during my sophomore year of high school with plans of a full restoration. My goal at the time was to drive my girlfriend to senior prom in it. While that did not happen (not even close), it has turned out to be the most rewarding project I have worked on with all sorts of fun challenges along the way. While there was a massive amount of body filler and rewiring the entire car, one of the biggest parts of the restoration (for me) was creating a custom dashboard from scratch.</p>
       
       <h2>The Dashboard Dilemma</h2>
-      <p>The 1968 Roadster came with a vinyl covered foam padded dashboard. It was ugly and did not at all match the style of the rest of the car. In fact, throughout the span of the Roadster's production, the design never drastically changed. The only big difference is the ugly interior they put in for the 1968 model year. We decided that rather than restoring the ugly blob dash that was in there, we favored the look of the flat dash that had been in the earlier cars.</p>
+      <p>The 1968 Roadster came with a vinyl covered foam padded dashboard. It was ugly and did not at all match the style of the rest of the car. In fact, throughout the span of the Roadster's production, the design never drastically changed – besides the ugly interior they put in for the 1968 model year. We decided that rather than restoring the ugly molded padded dash that was in there, we favored the look of the flat dash that had been in the earlier cars.</p>
       
-      <h2>Research and Decision</h2>
+      <div class="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <img src="https://www.sportscarmarket.com/uploads/2021/05/Datsun1600-01-scaled.jpg" alt="1968 Datsun Roadster Dashboard" class="w-full rounded-lg shadow-lg mb-2" />
+          <p class="text-sm text-gray-400 text-center italic">1968 Datsun Roadster Dashboard (source: Sports Car Market)</p>
+        </div>
+        <div>
+          <img src="https://ebayimages.s3.amazonaws.com/s-l1600.jpg" alt="1967 Datsun Roadster Dashboard" class="w-full rounded-lg shadow-lg mb-2" />
+          <p class="text-sm text-gray-400 text-center italic">1967 Datsun Roadster Dashboard (Source: eBay Motors Blog)</p>
+        </div>
+      </div>
+      
+      <h2>3D Scanning and Reverse Engineering</h2>
       <p>I did a lot of research on flat dash conversions for our car and found that it is a very involved process. It requires creating new brackets, lengthening wires, and cutting and welding of the dash, among others. All of this comes after forking out hundreds of dollars for a used, rusted out flat dash from a parts car. We therefore decided not to do a flat dash swap and opted to spend several times as much time and money developing our own lookalike kit. That way anyone in the Datsun community could easily swap our kit into their late model cars.</p>
       
-      <h2>Reverse Engineering with 3D Scanning</h2>
       <p>We started by actually buying the roached and rotting dash out of a 1966 Roadster complete with the gauges appropriate for that year, along with a 3D scanner to digitize it. We decided on a budget Revopoint Pop 2 3D scanner, and used Fusion 360 to reverse engineer the original flat dash. This was the first time I'd ever had to reverse engineer anything, and it was made especially challenging due to it being an organic shape with compound curved features. After lots of trial and error, I was very happy with the result.</p>
       
-      <h2>Learning CNC Machining</h2>
+      <h2>CNC Machining Process</h2>
       <p>I never would have taken on this project without a plan to build it once the design was done. So, this project coincided with me starting my first semester of college and gaining access to a large CNC router. I still had no idea how to use it though. I initially practiced with CAM software by making little trinkets like a checkers board and decorative wood boxes. After many trial runs figuring out feeds and speeds, I prayed a little prayer and sent the G-code to the machine.</p>
       
-      <h2>Manufacturing and Challenges</h2>
+      <div class="my-8">
+        <video controls class="w-full rounded-lg shadow-lg mb-4" style="max-width: 800px; margin: 0 auto; display: block;">
+          <source src="/pictures (2).mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="text-sm text-gray-400 text-center italic">Initial Machining Operation for the Dashboard Top Mold</p>
+      </div>
+      
       <p>Everything ran perfectly smoothly the first time, albeit I could have cut the machining time in half, and that still would be conservative for just cutting foam. The real issue came when we then prepared the mold to pull a fiberglass part on. The mold release began to dissolve the foam. The next obvious solution was to machine a more permanent mold out of MDF that could be used for several parts. That was much the same as the foam mold, and in the end I was left with a very nice looking part.</p>
       
-      <h2>Conclusion</h2>
+      <div class="my-8">
+        <video controls class="w-full rounded-lg shadow-lg mb-4" style="max-width: 800px; margin: 0 auto; display: block;">
+          <source src="/pictures (1).mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="text-sm text-gray-400 text-center italic">Machining the Final MDF Mold for the Dashboard Top</p>
+      </div>
+      
+      <h2>Results and Reflections</h2>
       <p>While the dash still needs some finishing touches, it is very nearly done and has been one of my favorite projects to date. It was rewarding to mount it in the car and be one step closer to driving it, albeit three years late to make my high school senior prom.</p>
     `
   },
@@ -201,6 +225,20 @@ const blogPostData = {
       <p>I was and still am thrilled with the end result. One small issue that I failed to consider until I had already started the project is that the knob gets hot enough to boil water after having sat outside in the Phoenix heat for a work day. It's a shame that I have to keep a microfiber cloth on it just to be able to use it, but come wintertime, it'll be a show stopper!</p>
       
       <p>This project taught me valuable lessons about CNC programming, machining operations sequencing, and the importance of considering real-world use conditions in design. The hands-on experience with both CNC lathe and mill operations provided invaluable skills that I continue to use in other projects.</p>
+    `
+  },
+  5: {
+    title: 'Honeywell Capstone Project',
+    excerpt: 'My senior capstone project sponsored by Honeywell - an innovative engineering solution that showcases advanced technical skills and industry collaboration.',
+    date: '2025-01-20',
+    readTime: '8 min read',
+    category: 'Capstone',
+    tags: ['Honeywell', 'Senior Project', 'Industry Sponsorship', 'Engineering'],
+    content: `
+      <h2>Coming Soon!</h2>
+      <p>Details about this exciting Honeywell-sponsored capstone project will be posted here soon. This project represents the culmination of my engineering education and showcases cutting-edge technical solutions developed in collaboration with industry experts.</p>
+      
+      <p>Stay tuned for an in-depth look at the challenges, solutions, and outcomes of this super cool project!</p>
     `
   },
   // Add more blog posts here...

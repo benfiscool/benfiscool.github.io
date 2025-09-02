@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Zap, Linkedin, Mail } from 'lucide-react'
+import { Menu, X, Settings, Linkedin, Mail } from 'lucide-react'
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
@@ -41,12 +41,17 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="relative">
-              <Zap className="w-8 h-8 text-stark-400 group-hover:text-stark-300 transition-colors" />
+              <Settings className="w-8 h-8 text-stark-400 group-hover:text-stark-300 transition-colors animate-spin-slow" />
               <div className="absolute inset-0 w-8 h-8 bg-stark-400/20 rounded-full blur-md group-hover:bg-stark-300/30 transition-colors" />
             </div>
-            <span className="font-bold text-xl text-white group-hover:text-stark-300 transition-colors">
-              BF
-            </span>
+            <div className="flex flex-col">
+              <span className="font-bold text-xl text-white group-hover:text-stark-300 transition-colors">
+                Benjamin Freeman
+              </span>
+              <span className="text-sm text-gray-400 group-hover:text-stark-400 transition-colors">
+                Mechanical Engineer
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -76,6 +81,8 @@ export function Header() {
             {/* Email Button */}
             <Link
               href="mailto:bencfreeman@outlook.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center space-x-2 text-gray-300 hover:text-stark-300 transition-colors group"
             >
               <Mail className="w-5 h-5" />
@@ -127,6 +134,8 @@ export function Header() {
                 {/* Mobile Email Link */}
                 <Link
                   href="mailto:bencfreeman@outlook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}
                   className="flex items-center space-x-2 text-gray-300 hover:text-stark-300 transition-colors py-2"
                 >
