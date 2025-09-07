@@ -45,13 +45,13 @@ export function CapstonePopup() {
             damping: 30,
             duration: 0.6 
           }}
-          className="fixed bottom-6 right-6 z-50 max-w-sm"
+          className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 max-w-xs sm:max-w-sm mx-4 sm:mx-0"
         >
-          <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-xl shadow-2xl p-6 backdrop-blur-xl">
+          <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-xl shadow-2xl p-4 sm:p-6 backdrop-blur-xl relative">
             {/* Close button */}
             <button
               onClick={handleDismiss}
-              className="absolute top-3 right-3 text-gray-400 hover:text-white transition-colors"
+              className="absolute top-2 right-2 sm:top-3 sm:right-3 text-gray-400 hover:text-white transition-colors"
             >
               <X className="w-4 h-4" />
             </button>

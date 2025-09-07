@@ -46,22 +46,22 @@ const blogPostData = {
       <h2>CNC Machining Process</h2>
       <p>I never would have taken on this project without a plan to build it once the design was done. So, this project coincided with me starting my first semester of college and gaining access to a large CNC router. I still had no idea how to use it though. I initially practiced with CAM software by making little trinkets like a checkers board and decorative wood boxes. After many trial runs figuring out feeds and speeds, I prayed a little prayer and sent the G-code to the machine.</p>
       
-      <div class="my-8">
-        <video controls class="w-full rounded-lg shadow-lg mb-4" style="max-width: 800px; margin: 0 auto; display: block;">
-          <source src="/pictures (2).mp4" type="video/mp4">
+      <div className="my-8">
+        <video controls className="w-full rounded-lg shadow-lg mb-4 max-w-full" style={{ maxWidth: '800px', margin: '0 auto', display: 'block' }}>
+          <source src="/pictures (2).mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <p class="text-sm text-gray-400 text-center italic">Initial Machining Operation for the Dashboard Top Mold</p>
+        <p className="text-sm text-gray-400 text-center italic">Initial Machining Operation for the Dashboard Top Mold</p>
       </div>
       
       <p>Everything ran perfectly smoothly the first time, albeit I could have cut the machining time in half, and that still would be conservative for just cutting foam. The real issue came when we then prepared the mold to pull a fiberglass part on. The mold release began to dissolve the foam. The next obvious solution was to machine a more permanent mold out of MDF that could be used for several parts. That was much the same as the foam mold, and in the end I was left with a very nice looking part.</p>
       
-      <div class="my-8">
-        <video controls class="w-full rounded-lg shadow-lg mb-4" style="max-width: 800px; margin: 0 auto; display: block;">
-          <source src="/pictures (1).mp4" type="video/mp4">
+      <div className="my-8">
+        <video controls className="w-full rounded-lg shadow-lg mb-4 max-w-full" style={{ maxWidth: '800px', margin: '0 auto', display: 'block' }}>
+          <source src="/pictures (1).mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <p class="text-sm text-gray-400 text-center italic">Machining the Final MDF Mold for the Dashboard Top</p>
+        <p className="text-sm text-gray-400 text-center italic">Machining the Final MDF Mold for the Dashboard Top</p>
       </div>
       
       <h2>Results and Reflections</h2>
