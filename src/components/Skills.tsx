@@ -1,12 +1,10 @@
-import { StreamlineHeading } from './StreamlineHeading'
-
 export function Skills() {
   return (
     <section className="py-20 px-6 bg-gray-900/50">
       <div className="container mx-auto max-w-6xl">
-        <StreamlineHeading className="text-4xl font-bold text-center mb-16 text-stark-300">
+        <h2 className="text-4xl font-bold text-center mb-16 text-stark-300">
           Technical Skills
-        </StreamlineHeading>
+        </h2>
         
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">

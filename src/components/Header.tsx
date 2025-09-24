@@ -30,7 +30,7 @@ export function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
           ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-800' 
-          : 'bg-transparent'
+          : 'bg-gray-900/90 backdrop-blur-sm md:bg-transparent md:backdrop-blur-none'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -109,7 +109,7 @@ export function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden mt-4 pb-4 border-t border-gray-800"
+              className="md:hidden mt-4 pb-4 border-t border-gray-800 bg-gray-900/95 backdrop-blur-md rounded-b-lg -mx-6 px-6"
             >
               <div className="flex flex-col space-y-4 mt-4">
                 {navItems.map((item) => (

@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { StreamlineHeading } from './StreamlineHeading'
 
 export function About() {
   const containerVariants = {
@@ -32,11 +31,12 @@ export function About() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          <motion.div variants={itemVariants}>
-            <StreamlineHeading className="text-4xl md:text-5xl font-bold text-center mb-16 glow-text">
-              About Me
-            </StreamlineHeading>
-          </motion.div>
+          <motion.h2 
+            variants={itemVariants}
+            className="text-4xl md:text-5xl font-bold text-center mb-16 glow-text"
+          >
+            About Me
+          </motion.h2>
 
           <motion.div variants={itemVariants} className="max-w-4xl mx-auto">
             <div className="card-glass p-8 md:p-12">

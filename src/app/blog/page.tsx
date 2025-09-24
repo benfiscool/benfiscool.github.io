@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react'
+import { Calendar, ArrowRight, Tag } from 'lucide-react'
 
 const blogPosts = [
   {
@@ -11,7 +11,6 @@ const blogPosts = [
     excerpt: 'A 30-year restoration project involving reverse engineering, 3D scanning, and CNC machining to create a custom dashboard conversion kit for the Datsun community.',
     content: 'Full content here...',
     date: '2024-12-15',
-    readTime: '6 min read',
     category: 'Projects',
     tags: ['Restoration', 'CNC', '3D Scanning', 'Reverse Engineering'],
     featured: true
@@ -22,7 +21,6 @@ const blogPosts = [
     excerpt: 'Building a custom CNC machine to help the Formula SAE team cope tubing with high accuracy and minimal human intervention, solving chassis asymmetry issues.',
     content: 'Full content here...',
     date: '2024-11-20',
-    readTime: '8 min read',
     category: 'Projects',
     tags: ['CNC', 'Formula SAE', 'Manufacturing', 'Automation', 'Plasma Cutting'],
     featured: false
@@ -33,7 +31,6 @@ const blogPosts = [
     excerpt: 'Building my own OneWheel-inspired balancing skateboard from scratch using a VESC motor controller, aluminum chassis, and custom PID tuning for the perfect ride.',
     content: 'Full content here...',
     date: '2024-10-15',
-    readTime: '5 min read',
     category: 'Projects',
     tags: ['DIY', 'Electric Vehicle', 'PID Control', 'VESC', 'Fabrication'],
     featured: false
@@ -44,7 +41,6 @@ const blogPosts = [
     excerpt: 'Learning CNC machining through hands-on experience creating a custom aluminum shift knob using both lathe and mill operations in a machine shop class.',
     content: 'Full content here...',
     date: '2024-09-20',
-    readTime: '4 min read',
     category: 'Projects',
     tags: ['CNC Machining', 'Lathe', 'Mill', 'Aluminum', 'CAM Programming'],
     featured: false
@@ -55,10 +51,19 @@ const blogPosts = [
     excerpt: 'My senior capstone project sponsored by Honeywell, focusing on cutting-edge aerospace technology and engineering innovation.',
     content: 'Full content here...',
     date: '2025-08-30',
-    readTime: '10 min read',
     category: 'Capstone',
     tags: ['Honeywell', 'Aerospace', 'Capstone', 'Senior Project', 'Engineering'],
     featured: true
+  },
+  {
+    id: 6,
+    title: 'Robotic Golf Caddy',
+    excerpt: 'Building an autonomous golf cart that uses computer vision and machine learning to follow me around the golf course while avoiding hazards like water and sand bunkers.',
+    content: 'Full content here...',
+    date: '2024-10-01',
+    category: 'Projects',
+    tags: ['Robotics', 'Computer Vision', 'Machine Learning', 'DIY', 'Golf'],
+    featured: false
   }
 ]
 
@@ -129,11 +134,6 @@ export default function BlogPage() {
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
                       <span>{new Date(post.date).toLocaleDateString()}</span>
-                    </div>
-                    <span className="text-gray-500">•</span>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      <span>{post.readTime}</span>
                     </div>
                   </div>
                   
@@ -210,10 +210,6 @@ export default function BlogPage() {
                     <div className="flex items-center gap-1">
                       <Calendar className="w-3 h-3" />
                       <span>{new Date(post.date).toLocaleDateString()}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      <span>{post.readTime}</span>
                     </div>
                   </div>
                   

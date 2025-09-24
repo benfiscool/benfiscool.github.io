@@ -17,7 +17,7 @@ export function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.2, 0.1, 0])
 
   return (
-    <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section ref={ref} className="relative min-h-screen flex items-start justify-center overflow-hidden pt-24 md:pt-0 md:items-center">
       <motion.div 
         className="absolute inset-0 will-change-transform"
         style={{ y, opacity }}
@@ -34,7 +34,7 @@ export function Hero() {
       
       <div className="absolute inset-0 tech-grid opacity-30" />
       
-      <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+      <div className="relative z-10 text-center px-3 sm:px-6 max-w-6xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -43,11 +43,11 @@ export function Hero() {
         >
           <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-800/70 to-gray-900/80 backdrop-blur-sm rounded-3xl border border-stark-400/20 shadow-2xl" />
           
-          <div className="relative z-10 p-8 md:p-12">
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-12 mb-12">
-              <div className="flex-1 text-center lg:text-left">
+          <div className="relative z-10 p-4 sm:p-6 md:p-8 lg:p-12">
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-8 lg:mb-12">
+              <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
                 <motion.p
-                  className="text-stark-400 text-lg mb-4 font-mono"
+                  className="text-stark-400 text-sm sm:text-base lg:text-lg mb-4 font-mono"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.8, duration: 0.6 }}
@@ -56,7 +56,7 @@ export function Hero() {
                 </motion.p>
 
                 <motion.h1
-                  className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 glow-text"
+                  className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 lg:mb-6 glow-text leading-tight break-words"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1, duration: 0.8 }}
@@ -65,7 +65,7 @@ export function Hero() {
                 </motion.h1>
 
                 <motion.p
-                  className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-6 font-light"
+                  className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-4 lg:mb-6 font-light break-words"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1.2, duration: 0.6 }}
@@ -74,24 +74,24 @@ export function Hero() {
                 </motion.p>
 
                 <motion.p
-                  className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+                  className="text-xs xs:text-sm sm:text-base lg:text-lg text-gray-400 mb-6 lg:mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed px-1 sm:px-2 break-words"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1.4, duration: 0.6 }}
                 >
                   Senior at <span className="text-stark-400 font-semibold">Embry-Riddle Aeronautical University</span> 
-                  {' '}specializing in <span className="text-stark-400 font-semibold">propulsion systems</span>. 
+                  {' '}specializing in <span className="text-stark-400 font-semibold">jet engine propulsion systems</span>. 
                   Passionate about pushing the boundaries of aerospace engineering.
                 </motion.p>
               </div>
 
               <motion.div
-                className="flex-shrink-0"
+                className="flex-shrink-0 order-1 lg:order-2"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1.2, duration: 0.8 }}
               >
-                <div className="relative w-80 h-96 rounded-2xl overflow-hidden border-2 border-stark-400/30 shadow-2xl">
+                <div className="relative w-48 h-60 sm:w-64 sm:h-80 lg:w-80 lg:h-96 rounded-2xl overflow-hidden border-2 border-stark-400/30 shadow-2xl mx-auto">
                   <Image
                     src="/portrait.jpg"
                     alt="Benjamin Freeman"
@@ -106,16 +106,16 @@ export function Hero() {
             </div>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4 sm:px-0"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.6, duration: 0.6 }}
             >
-              <Link href="/resume" className="btn-primary flex items-center gap-2 group">
+              <Link href="/resume" className="btn-primary flex items-center gap-2 group w-full sm:w-auto justify-center">
                 <Download className="w-5 h-5 group-hover:animate-bounce" />
                 View Resume
               </Link>
-              <Link href="/about" className="btn-secondary flex items-center gap-2 group">
+              <Link href="/about" className="btn-secondary flex items-center gap-2 group w-full sm:w-auto justify-center">
                 <Rocket className="w-5 h-5 group-hover:animate-pulse" />
                 Learn More
               </Link>

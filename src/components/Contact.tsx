@@ -1,12 +1,10 @@
-import { StreamlineHeading } from './StreamlineHeading'
-
 export function Contact() {
   return (
     <section className="py-20 px-6 bg-gray-900/50">
       <div className="container mx-auto max-w-4xl text-center">
-        <StreamlineHeading className="text-4xl font-bold mb-8 text-stark-300">
+        <h2 className="text-4xl font-bold mb-8 text-stark-300">
           Get In Touch
-        </StreamlineHeading>
+        </h2>
         <p className="text-xl text-gray-300 mb-12">
           Ready to discuss aerospace engineering, propulsion systems, or potential collaborations?
         </p>

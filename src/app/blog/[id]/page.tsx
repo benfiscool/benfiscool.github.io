@@ -1,13 +1,14 @@
 import BlogPostContent from '@/components/BlogPostContent'
 
 // Generate static params for all blog posts
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return [
     { id: '1' },
     { id: '2' },
     { id: '3' },
     { id: '4' },
     { id: '5' },
+    { id: '6' },
     // Add more IDs here as you create more blog posts
   ]
 }
@@ -18,61 +19,54 @@ const blogPostData = {
     title: 'Datsun Roadster Project',
     excerpt: 'A 30-year restoration project involving reverse engineering, 3D scanning, and CNC machining to create a custom dashboard conversion kit for the Datsun community.',
     date: '2024-12-15',
-    readTime: '6 min read',
     category: 'Projects',
     tags: ['Restoration', 'CNC', '3D Scanning', 'Reverse Engineering'],
     content: `
-      <p>Sometime in the early nineties, my dad brought home a 1968 Datsun Roadster and parked it in our backyard. There it sat for 30 years until he and I dug it out during my sophomore year of high school with plans of a full restoration. My goal at the time was to drive my girlfriend to senior prom in it. While that did not happen (not even close), it has turned out to be the most rewarding project I have worked on with all sorts of fun challenges along the way. While there was a massive amount of body filler and rewiring the entire car, one of the biggest parts of the restoration (for me) was creating a custom dashboard from scratch.</p>
+      <p>Sometime in the early nineties, my dad brought home a 1968 Datsun Roadster and parked it in our backyard. There it sat for 30 years until he and I dug it out during my sophomore year of high school with plans of a full restoration. My goal at the time was to drive my girlfriend to senior prom in it. While that did not happen (not even close), it has turned out to be the most rewarding project I have worked on with all sorts of fun challenges along the way.</p>
       
-      <h2>The Dashboard Dilemma</h2>
-      <p>The 1968 Roadster came with a vinyl covered foam padded dashboard. It was ugly and did not at all match the style of the rest of the car. In fact, throughout the span of the Roadster's production, the design never drastically changed – besides the ugly interior they put in for the 1968 model year. We decided that rather than restoring the ugly molded padded dash that was in there, we favored the look of the flat dash that had been in the earlier cars.</p>
-      
-      <div class="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div>
-          <img src="https://www.sportscarmarket.com/uploads/2021/05/Datsun1600-01-scaled.jpg" alt="1968 Datsun Roadster Dashboard" class="w-full rounded-lg shadow-lg mb-2" />
-          <p class="text-sm text-gray-400 text-center italic">1968 Datsun Roadster Dashboard (source: Sports Car Market)</p>
-        </div>
-        <div>
-          <img src="https://ebayimages.s3.amazonaws.com/s-l1600.jpg" alt="1967 Datsun Roadster Dashboard" class="w-full rounded-lg shadow-lg mb-2" />
-          <p class="text-sm text-gray-400 text-center italic">1967 Datsun Roadster Dashboard (Source: eBay Motors Blog)</p>
-        </div>
+      <p>I could write a book on all of the learnings along the way, so I'll spare you the boring bits about body filler and redoing the electrical harness, and rather talk about the fun part – the dashboard! You'll have to hear me out…</p>
+
+      <p>The 1968 Roadster came with a vinyl covered foam padded dashboard. It was ugly and did not at all match the style of the rest of the car. In fact, throughout the span of the Roadster's production, the design never drastically changed. The only big difference is the ugly interior they put in for the 1968 model year. We decided that rather than restoring the ugly blob dash that was in there, we favored the look of the flat dash that had been in the earlier cars.</p>
+
+      <div className="my-8">
+        <img src="/blog/datsun-roadster/image-1.jpeg" alt="1968 Datsun Roadster Dashboard" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">1968 Datsun Roadster Dashboard</p>
       </div>
-      
-      <h2>3D Scanning and Reverse Engineering</h2>
+
       <p>I did a lot of research on flat dash conversions for our car and found that it is a very involved process. It requires creating new brackets, lengthening wires, and cutting and welding of the dash, among others. All of this comes after forking out hundreds of dollars for a used, rusted out flat dash from a parts car. We therefore decided not to do a flat dash swap and opted to spend several times as much time and money developing our own lookalike kit. That way anyone in the Datsun community could easily swap our kit into their late model cars.</p>
-      
+
+      <div className="my-8">
+        <img src="/blog/datsun-roadster/image-2.jpeg" alt="1967 Datsun Roadster Dashboard" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">1967 Datsun Roadster Dashboard</p>
+      </div>
+
       <p>We started by actually buying the roached and rotting dash out of a 1966 Roadster complete with the gauges appropriate for that year, along with a 3D scanner to digitize it. We decided on a budget Revopoint Pop 2 3D scanner, and used Fusion 360 to reverse engineer the original flat dash. This was the first time I'd ever had to reverse engineer anything, and it was made especially challenging due to it being an organic shape with compound curved features. After lots of trial and error, I was very happy with the result.</p>
-      
-      <h2>CNC Machining Process</h2>
+
       <p>I never would have taken on this project without a plan to build it once the design was done. So, this project coincided with me starting my first semester of college and gaining access to a large CNC router. I still had no idea how to use it though. I initially practiced with CAM software by making little trinkets like a checkers board and decorative wood boxes. After many trial runs figuring out feeds and speeds, I prayed a little prayer and sent the G-code to the machine.</p>
-      
+
       <div className="my-8">
         <video controls className="w-full rounded-lg shadow-lg mb-4 max-w-full" style={{ maxWidth: '800px', margin: '0 auto', display: 'block' }}>
           <source src="/pictures (2).mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <p className="text-sm text-gray-400 text-center italic">Initial Machining Operation for the Dashboard Top Mold</p>
+        <p className="text-sm text-gray-400 text-center italic">CNC machining process</p>
       </div>
-      
+
       <p>Everything ran perfectly smoothly the first time, albeit I could have cut the machining time in half, and that still would be conservative for just cutting foam. The real issue came when we then prepared the mold to pull a fiberglass part on. The mold release began to dissolve the foam. The next obvious solution was to machine a more permanent mold out of MDF that could be used for several parts. That was much the same as the foam mold, and in the end I was left with a very nice looking part.</p>
-      
-      <div className="my-8">
-        <video controls className="w-full rounded-lg shadow-lg mb-4 max-w-full" style={{ maxWidth: '800px', margin: '0 auto', display: 'block' }}>
-          <source src="/pictures (1).mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <p className="text-sm text-gray-400 text-center italic">Machining the Final MDF Mold for the Dashboard Top</p>
-      </div>
-      
-      <h2>Results and Reflections</h2>
+
       <p>While the dash still needs some finishing touches, it is very nearly done and has been one of my favorite projects to date. It was rewarding to mount it in the car and be one step closer to driving it, albeit three years late to make my high school senior prom.</p>
+
+      <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <img src="/blog/datsun-roadster/image-3.jpeg" alt="Finished dashboard view 1" className="w-full rounded-lg shadow-lg" />
+        <img src="/blog/datsun-roadster/image-4.jpeg" alt="Finished dashboard view 2" className="w-full rounded-lg shadow-lg" />
+      </div>
+      <p className="text-sm text-gray-400 text-center italic mt-2">(Nearly) Finished Dashboard</p>
     `
   },
   2: {
     title: 'CNC Tubing Coper',
     excerpt: 'Building a custom CNC machine to help the Formula SAE team cope tubing with high accuracy and minimal human intervention, solving chassis asymmetry issues.',
     date: '2024-11-20',
-    readTime: '8 min read',
     category: 'Projects',
     tags: ['CNC', 'Formula SAE', 'Manufacturing', 'Automation', 'Plasma Cutting'],
     content: `
@@ -147,7 +141,6 @@ const blogPostData = {
     title: 'DIY Balancing Skateboard',
     excerpt: 'Building my own OneWheel-inspired balancing skateboard from scratch using a VESC motor controller, aluminum chassis, and custom PID tuning for the perfect ride.',
     date: '2024-10-15',
-    readTime: '5 min read',
     category: 'Projects',
     tags: ['DIY', 'Electric Vehicle', 'PID Control', 'VESC', 'Fabrication'],
     content: `
@@ -196,7 +189,6 @@ const blogPostData = {
     title: 'CNC Machined Custom Shift Knob',
     excerpt: 'Learning CNC machining through hands-on experience creating a custom aluminum shift knob using both lathe and mill operations in a machine shop class.',
     date: '2024-09-20',
-    readTime: '4 min read',
     category: 'Projects',
     tags: ['CNC Machining', 'Lathe', 'Mill', 'Aluminum', 'CAM Programming'],
     content: `
@@ -231,7 +223,6 @@ const blogPostData = {
     title: 'Honeywell Capstone Project',
     excerpt: 'My senior capstone project sponsored by Honeywell - an innovative engineering solution that showcases advanced technical skills and industry collaboration.',
     date: '2025-01-20',
-    readTime: '8 min read',
     category: 'Capstone',
     tags: ['Honeywell', 'Senior Project', 'Industry Sponsorship', 'Engineering'],
     content: `
@@ -239,6 +230,93 @@ const blogPostData = {
       <p>Details about this exciting Honeywell-sponsored capstone project will be posted here soon. This project represents the culmination of my engineering education and showcases cutting-edge technical solutions developed in collaboration with industry experts.</p>
       
       <p>Stay tuned for an in-depth look at the challenges, solutions, and outcomes of this super cool project!</p>
+    `
+  },
+  6: {
+    title: 'Robotic Golf Caddy',
+    excerpt: 'Building an autonomous golf cart that uses computer vision and machine learning to follow me around the golf course while avoiding hazards like water and sand bunkers.',
+    date: '2024-10-01',
+    category: 'Projects',
+    tags: ['Robotics', 'Computer Vision', 'Machine Learning', 'DIY', 'Golf'],
+    content: `
+      <p>In high school, my girlfriend played varsity golf and wanted me to pick up the sport so that we could play together. Over four years later, she still beats me by at least twenty strokes, but I still love to play. I go play by myself fairly often in hopes that one day I lose by not as much. Usually, I walk the course in order to save some money by avoiding the cart rental fee, but my legs and feet hurt after hours of carrying around a golf bag on my back. One day I was walking through goodwill and found a used hoverboard for $15. To my surprise, it actually worked! This game me an idea: I could build a robot that would carry my clubs and follow me around using the hoverboard motors and battery. It would save me tons of money by recycling the guts of the hoverboard including the battery, motors, and speed controllers.</p>
+      
+      <p>While standing there at the store on my phone, I pulled up Github and immediately started searching for an open-source software to reprogram the hoverboard motor controllers. Apparently, this is actually a very common thing to do in the budget-oriented DIY robotics community. There was already software written that allows DIYers to flash the microcontrollers on the main board (typically either an ESP32 or STM32) to take them over. Being that it was only $15, I bought the board without much second thought.</p>
+      
+      <div className="my-8">
+        <video controls className="w-full rounded-lg shadow-lg mb-4 max-w-full" style={{ maxWidth: '800px', margin: '0 auto', display: 'block' }}>
+          <source src="/robotic-golf-caddy-explanation.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <p className="text-sm text-gray-400 text-center italic">A Brief Explanation of the Golf Cart</p>
+      </div>
+      
+      <p>The next large consideration was how to control the robot once it was built. I considered several methods including remote control, lidar, gps, computer vision, and combinations thereof. I considered that remote controlled golf rolling carts are already commercially available, and they're nice but they're not that cool. Next, I considered using a Bluetooth connection between my phone and the cart which would send my phone's GPS location to the cart which, in turn, would use its own GPS and a magnetometer to follow me. I went very deep into the app development before I realized that this was computationally heavy for the microcontroller and also drained my phone battery. After considering other methods, I eventually landed on an elegant solution – computer vision.</p>
+      
+      <p>The beauty of this approach is that there are preexisting computer vision models that can detect humans and recognize them. This would allow the cart to detect humans, approximate the distance to them based on the size of the bounding box, and recognize which particular human it is supposed to follow. Using this method did necessitate a much more capable processor than my original esp32 microcontroller though. After some research I ended up purchasing an Orange Pi 5 - a Raspberry Pi compatible single board Linux-based computer with the addition of an on-board NPU (Neural Processing Unit). This extra chip allows for the Orange Pi to run real-time computer vision models.</p>
+      
+      <div className="my-8">
+        <img src="/blog/robotic-golf-caddy/image-1.jpeg" alt="Orange Pi 5 Single Board Computer" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">Orange Pi 5 Single Board Computer (Source: Orangepi.org)</p>
+      </div>
+      
+      <p>Upon initial startup, I downloaded visual studio code and set up a python virtual environment. I used Github Copilot to generate a program which leveraged YoloV8 (an object detection model) and an additional Re-ID model which allows the Orange Pi to detect and remember the player which it is supposed to follow. This left me with one major problem: golf courses are covered in features which are dangerous for robots. I want the cart to follow me, but not while I'm in a sand bunker, standing on the green, or God forbid standing on the edge of a pond (as I often do). I once again considered using an onboard GPS module combined with OpenStreetMaps (a free open-source alternative to google maps) in order to steer clear of these hazards. However, in addition to the battery hog as discussed earlier, I also came across several golf courses during testing in which the hazards were not marked on OpenStreetMaps. This meant that if I were standing in a bunker, the cart would follow me in without thinking twice. Then it dawned on me that if I'm already using an object recognition model, why not train it to also recognize these kinds of hazards using the camera?</p>
+      
+      <p>The only issue with this method is that there is no computer vision model that is trained on these features meaning that I would have to do it myself. I spent the next several days manually labeling over 500 different golf course images including drawing bounding boxes around greens, bunkers, and water. It was time well-spent because after hours of machine learning, I had a lightweight model that ran side by side with the preexisting models all on the Orange Pi. Even better was that it reliably detected bunkers, greens, and water.</p>
+      
+      <p>Now that I had software more or less completed, I moved on to designing the actual bones of the golf cart. I had several meter-long sticks of 20x20mm T-slot aluminum extrusion leftover from a previous project that I figured would be perfect for building the chassis. It's easy to cut and makes the chassis highly modular. Any components that don't work can be removed and replaced with next to no hassle. Furthermore, the t-slot allowed me to mount components nearly anywhere meaning I could quickly adjust the location of everything that needed to be attached to the cart.</p>
+      
+      <p>I started by drawing up a quick CAD model. As you'll see, the current version strayed from the model but it helped to visualize how all of the base components would come together and take shape.</p>
+      
+      <div className="my-8">
+        <img src="/blog/robotic-golf-caddy/image-2.png" alt="Initial CAD Model" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">Initial CAD Model</p>
+      </div>
+      
+      <div className="my-8">
+        <img src="/blog/robotic-golf-caddy/image-3.png" alt="Generating Bracket Toolpaths in CAM" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">Generating Bracket Toolpaths in CAM</p>
+      </div>
+      
+      <div className="my-8">
+        <img src="/blog/robotic-golf-caddy/image-4.jpeg" alt="Initial Layout of the Parts" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">Initial Layout of the Parts</p>
+      </div>
+      
+      <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <img src="/blog/robotic-golf-caddy/image-5.png" alt="Rear Brackets CAD/CAM" className="w-full rounded-lg shadow-lg mb-2" />
+          <p className="text-sm text-gray-400 text-center italic">Rear Brackets CAD/CAM</p>
+        </div>
+        <div>
+          <img src="/blog/robotic-golf-caddy/image-6.png" alt="Front Caster Wheel Mount CAD/CAM" className="w-full rounded-lg shadow-lg mb-2" />
+          <p className="text-sm text-gray-400 text-center italic">Front Caster Wheel Mount CAD/CAM</p>
+        </div>
+      </div>
+      
+      <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <img src="/blog/robotic-golf-caddy/image-7.jpeg" alt="Finished Rear Bracket" className="w-full rounded-lg shadow-lg mb-2" />
+          <p className="text-sm text-gray-400 text-center italic">Finished Rear Bracket</p>
+        </div>
+        <div>
+          <img src="/blog/robotic-golf-caddy/image-8.jpeg" alt="Finished Front Caster Wheel Mount" className="w-full rounded-lg shadow-lg mb-2" />
+          <p className="text-sm text-gray-400 text-center italic">Finished Front Caster Wheel Mount</p>
+        </div>
+      </div>
+      
+      <p>The following pictures are of the golf cart as it sits right now at the time of writing this, just waiting for the final bits and bobs to be attached. I am battling what engineers and developers alike refer to as "integration hell", where everything works individually but nothing works when brought together. I am learning the ins and outs of Linux while trying to set a custom resolution for the screen that will go on the golf cart. I am learning how to work with the can-bus protocol to allow the Orange Pi to talk to the speed controllers. I am also learning that good engineering takes patience and a willingness to learn, which I have done lots of throughout this project. It's my first time doing anything on the Linux operating system, let alone the first time I've ever used or trained computer vision models using machine learning. This project has pushed me out of my comfort zone but I'm thrilled with my progress so far and hope to have it working very soon. Thank you for taking the time to read this and be sure to check back in the future for project updates!</p>
+      
+      <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <img src="/blog/robotic-golf-caddy/image-9.jpeg" alt="Front of the Golf Cart" className="w-full rounded-lg shadow-lg mb-2" />
+          <p className="text-sm text-gray-400 text-center italic">Front of the Golf Cart</p>
+        </div>
+        <div>
+          <img src="/blog/robotic-golf-caddy/image-10.jpeg" alt="Back of the Golf Cart" className="w-full rounded-lg shadow-lg mb-2" />
+          <p className="text-sm text-gray-400 text-center italic">Back of the Golf Cart</p>
+        </div>
+      </div>
     `
   },
   // Add more blog posts here...

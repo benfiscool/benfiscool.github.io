@@ -2,16 +2,18 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Calendar, Clock, ArrowLeft, Share2, BookOpen, User } from 'lucide-react'
+import { Calendar, ArrowLeft, User } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
 interface BlogPost {
   title: string
   excerpt: string
   date: string
-  readTime: string
   category: string
   tags: string[]
   content: string
+  // Optional: when provided, will load HTML from this path (e.g., `/blog/datsun-roadster/content.html`)
+  contentPath?: string
 }
 
 interface BlogPostContentProps {
@@ -69,11 +71,6 @@ export default function BlogPostContent({ post, postId }: BlogPostContentProps) 
               <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
               <span>{new Date(post.date).toLocaleDateString()}</span>
             </div>
-            <span className="text-gray-500 hidden sm:inline">•</span>
-            <div className="flex items-center gap-1">
-              <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
-              <span>{post.readTime}</span>
-            </div>
           </div>
 
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 glow-text leading-tight">
@@ -96,7 +93,7 @@ export default function BlogPostContent({ post, postId }: BlogPostContentProps) 
             ))}
           </div>
 
-          {/* Author & Share */}
+          {/* Author */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between border-t border-b border-gray-800 py-4 sm:py-6 gap-4 sm:gap-0">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 sm:w-12 sm:h-12 bg-stark-600/20 rounded-full flex items-center justify-center">
@@ -107,11 +104,6 @@ export default function BlogPostContent({ post, postId }: BlogPostContentProps) 
                 <p className="text-gray-400 text-xs sm:text-sm">Mechanical Engineering Student</p>
               </div>
             </div>
-            
-            <button className="flex items-center gap-2 text-stark-400 hover:text-stark-300 transition-colors self-start sm:self-auto">
-              <Share2 className="w-4 h-4" />
-              <span className="text-sm">Share</span>
-            </button>
           </div>
         </motion.header>
 
@@ -122,10 +114,7 @@ export default function BlogPostContent({ post, postId }: BlogPostContentProps) 
           transition={{ duration: 0.6, delay: 0.3 }}
           className="prose prose-invert prose-sm sm:prose-base lg:prose-lg max-w-none"
         >
-          <div 
-            className="text-gray-300 leading-relaxed blog-content"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
+          <ContentRenderer post={post} />
         </motion.article>
 
         {/* Article Footer */}
@@ -180,5 +169,35 @@ export default function BlogPostContent({ post, postId }: BlogPostContentProps) 
         </motion.section>
       </div>
     </div>
+  )
+}
+
+function ContentRenderer({ post }: { post: { content: string; contentPath?: string } }) {
+  const [html, setHtml] = useState<string | null>(null)
+
+  useEffect(() => {
+    let ignore = false
+    async function load() {
+      if (post.contentPath) {
+        try {
+          const res = await fetch(post.contentPath)
+          const text = await res.text()
+          if (!ignore) setHtml(text)
+        } catch (e) {
+          if (!ignore) setHtml(post.content)
+        }
+      } else {
+        setHtml(post.content)
+      }
+    }
+    load()
+    return () => { ignore = true }
+  }, [post.contentPath, post.content])
+
+  return (
+    <div
+      className="text-gray-300 leading-relaxed blog-content"
+      dangerouslySetInnerHTML={{ __html: html ?? '' }}
+    />
   )
 }
