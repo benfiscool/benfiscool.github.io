@@ -11,7 +11,7 @@ export default function ResumePage() {
         {/* Download Button */}
         <div className="flex justify-center mb-8">
           <a 
-            href="/Benjamin Freeman ME Resume.pdf" 
+            href="/Ben Freeman Resume 9_30_25.pdf" 
             download
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-300 flex items-center gap-2"
           >
@@ -28,7 +28,7 @@ export default function ResumePage() {
             <h2 className="text-2xl font-bold mb-4 text-blue-400">Benjamin Freeman</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-300">
               <div>
-                <p><span className="font-semibold">Email:</span> <a href="mailto:freemb10@my.erau.edu" className="text-blue-400 hover:text-blue-300">freemb10@my.erau.edu</a></p>
+                <p><span className="font-semibold">Email:</span> <a href="mailto:benfreeman@outlook.com" className="text-blue-400 hover:text-blue-300">benfreeman@outlook.com</a></p>
                 <p><span className="font-semibold">Phone:</span> (602) 617-3531</p>
               </div>
               <div>
@@ -42,7 +42,7 @@ export default function ResumePage() {
           <div className="card-glass p-8">
             <h2 className="text-2xl font-bold mb-4 text-blue-400">Summary</h2>
             <p className="text-gray-300 leading-relaxed">
-              Detail-oriented Mechanical Engineering student with a 3.9 GPA and a strong foundation in fabrication, CAD design, welding, and machining. Experienced in hands-on workshop environments through academic and industry roles. Passionate about engineering and eager to contribute to campus shop operations through safe, efficient, and high-quality work.
+              Detail-oriented and highly adaptable mechanical engineering student seeking an entry-level engineering position. With a strong foundation in CAD design, mathematics, machining, and various software packages, I'm eager to gain my start in the field of mechanical engineering.
             </p>
           </div>
 
@@ -63,12 +63,12 @@ export default function ResumePage() {
 
           {/* Experience */}
           <div className="card-glass p-8">
-            <h2 className="text-2xl font-bold mb-6 text-blue-400">Experience</h2>
+            <h2 className="text-2xl font-bold mb-6 text-blue-400">Professional Experience</h2>
             <div className="space-y-6">
               
               <div>
                 <h3 className="text-xl font-semibold text-white">Machining Assistant</h3>
-                <p className="text-blue-300">ERAU Campus Machine Shop (AXFAB) • Prescott, AZ</p>
+                <p className="text-blue-300">Embry-Riddle Campus Machine Shop • Prescott, AZ</p>
                 <p className="text-gray-400">Aug 2025 - Present</p>
                 <ul className="mt-2 space-y-1 text-gray-300">
                   <li>• Produce parts from conception to completion using CAD, CAM, and CNC/manual lathes and mills.</li>
@@ -82,8 +82,20 @@ export default function ResumePage() {
                 <p className="text-blue-300">Dyno-Comp Performance Tuning • Scottsdale, AZ</p>
                 <p className="text-gray-400">May 2024 – Aug 2025</p>
                 <ul className="mt-2 space-y-1 text-gray-300">
-                  <li>• Conducted 3D scans and CFD analysis to improve the cooling and aerodynamics of performance vehicles.</li>
-                  <li>• Designed and 3D-printed custom components to customer specifications.</li>
+                  <li>• Conducted reverse-engineered 3D scans to produce custom, off-shelf solutions to meet customer needs.</li>
+                  <li>• Utilized CFD analysis to validate the effectiveness of designs.</li>
+                  <li>• Maintained a fleet of 3D printers and created standard operating procedure documents for equipment use, maintenance, and best practices.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-white">Freelance CAD Designer</h3>
+                <p className="text-blue-300">Fiverr.com</p>
+                <p className="text-gray-400">May 2022 – Present</p>
+                <ul className="mt-2 space-y-1 text-gray-300">
+                  <li>• Worked with customers to produce original CAD designs for prototyping and production.</li>
+                  <li>• Received requirements and interfaces in various forms to create drop-in replacement parts for existing applications.</li>
+                  <li>• Managed time effectively to deliver all ongoing projects at or before agreed upon delivery date.</li>
                 </ul>
               </div>
 
@@ -110,6 +122,7 @@ export default function ResumePage() {
                 <ul className="mt-2 space-y-1 text-gray-300">
                   <li>• Designing a test rig to evaluate wear on foil bearings for use in auxiliary power units (APUs)</li>
                   <li>• Collaborate with a team of seven to evaluate project requirements, scope, and produce a viable product within budget.</li>
+                  <li>• <a href="/blog/5" className="text-blue-400 hover:text-blue-300 underline transition-colors">Learn more about this capstone project →</a></li>
                 </ul>
               </div>
 
@@ -120,6 +133,17 @@ export default function ResumePage() {
                   <li>• Responsible for onboarding and training monitors who oversee the space</li>
                   <li>• Train members on safe and proper use of shop tools and machinery</li>
                   <li>• Operate and maintain a variety of machinery including a lathe, mill, ShopBot CNC router, and several band saws.</li>
+                  <li>• Led complex projects including <a href="/blog/1" className="text-blue-400 hover:text-blue-300 underline transition-colors">custom dashboard fabrication</a> using 3D scanning and CNC machining</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-white">Robotic Golf Caddy</h3>
+                <ul className="mt-2 space-y-1 text-gray-300">
+                  <li>• Designed and built a robotic golf caddy to autonomously drive around a golf course.</li>
+                  <li>• Led a team of 6 in fabrication, component selection, and integration.</li>
+                  <li>• Delivered a fully functional product on time for the golf course.</li>
+                  <li>• <a href="/blog/6" className="text-blue-400 hover:text-blue-300 underline transition-colors">View detailed project documentation →</a></li>
                 </ul>
               </div>
             </div>
@@ -130,12 +154,12 @@ export default function ResumePage() {
             <h2 className="text-2xl font-bold mb-6 text-blue-400">Technical Skills</h2>
             <div className="space-y-4">
               <div>
-                <h3 className="text-lg font-semibold text-white mb-2">Software</h3>
-                <p className="text-gray-300">Solidworks (CSWA Certification), Fusion 360, Unity 3D, Excel, Word, Matlab</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Software & Programming</h3>
+                <p className="text-gray-300">Microsoft Office Suite, Visual Studio, Ansys Fluent, SysML, Matlab, C# Programming, Solidworks (CSWA Certification), Fusion 360, Ansys Static Structural, Unity 3D</p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-white mb-2">Technical</h3>
-                <p className="text-gray-300">Welding, Fabrication, 3D Printing, 3D Scanning</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Technical Skills</h3>
+                <p className="text-gray-300">Reverse Engineering, MBSE (Model-Based Systems Engineering), 3D Scanning, 3D Printing, Welding, Fabrication, CNC/Manual Machining</p>
               </div>
             </div>
           </div>

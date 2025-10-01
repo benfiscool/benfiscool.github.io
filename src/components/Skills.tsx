@@ -6,26 +6,38 @@ export function Skills() {
           Technical Skills
         </h2>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
-            <h3 className="text-xl font-bold text-stark-300 mb-4">Engineering</h3>
+            <h3 className="text-xl font-bold text-stark-300 mb-4">CAD & Analysis</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>• Thermodynamics</li>
-              <li>• Fluid Mechanics</li>
-              <li>• Heat Transfer</li>
-              <li>• Propulsion Systems</li>
-              <li>• Materials Science</li>
+              <li>• Solidworks (CSWA Certified)</li>
+              <li>• Fusion 360</li>
+              <li>• Ansys Fluent (CFD)</li>
+              <li>• Ansys Static Structural</li>
+              <li>• 3D Scanning & Reverse Engineering</li>
             </ul>
           </div>
           
           <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
-            <h3 className="text-xl font-bold text-stark-300 mb-4">Software</h3>
+            <h3 className="text-xl font-bold text-stark-300 mb-4">Programming & Software</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>• SolidWorks</li>
+              <li>• C# Programming</li>
               <li>• MATLAB</li>
-              <li>• Microsoft Excel</li>
-              <li>• Microsoft Word</li>
-              <li>• Autodesk CFD</li>
+              <li>• Unity 3D</li>
+              <li>• Visual Studio</li>
+              <li>• Microsoft Office Suite</li>
+              <li>• SysML</li>
+              <li>• MBSE (Model-Based Systems Engineering)</li>
+            </ul>
+          </div>
+
+          <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
+            <h3 className="text-xl font-bold text-stark-300 mb-4">Manufacturing & Design</h3>
+            <ul className="space-y-2 text-gray-300">
+              <li>• CNC/Manual Machining</li>
+              <li>• 3D Printing</li>
+              <li>• Welding & Fabrication</li>
+              <li>• Product Design & Prototyping</li>
             </ul>
           </div>
         </div>

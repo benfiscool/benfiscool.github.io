@@ -47,12 +47,12 @@ const blogPosts = [
   },
   {
     id: 5,
-    title: 'Senior Capstone: Honeywell Aerospace Project',
-    excerpt: 'My senior capstone project sponsored by Honeywell, focusing on cutting-edge aerospace technology and engineering innovation.',
+    title: 'Senior Capstone Project: Foil Bearing Test Rig',
+    excerpt: 'My senior capstone project sponsored by Honeywell Aerospace - developing a test rig to evaluate the lifespan of foil bearings used in gas turbine engines.',
     content: 'Full content here...',
-    date: '2025-08-30',
+    date: '2025-01-20',
     category: 'Capstone',
-    tags: ['Honeywell', 'Aerospace', 'Capstone', 'Senior Project', 'Engineering'],
+    tags: ['Honeywell', 'Aerospace', 'Foil Bearings', 'Test Rig', 'Senior Project'],
     featured: true
   },
   {
@@ -63,7 +63,7 @@ const blogPosts = [
     date: '2024-10-01',
     category: 'Projects',
     tags: ['Robotics', 'Computer Vision', 'Machine Learning', 'DIY', 'Golf'],
-    featured: false
+    featured: true
   }
 ]
 

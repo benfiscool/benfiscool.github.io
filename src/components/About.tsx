@@ -42,7 +42,7 @@ export function About() {
             <div className="card-glass p-8 md:p-12">
               <div className="text-lg text-gray-300 leading-relaxed mb-8">
                 <p>
-                  Hello, and thanks for visiting my site! I'm Ben, a mechanical engineering senior at Embry-Riddle Aeronautical University in Prescott, Arizona. I love my degree, and I especially love the hands-on experience that it affords me. I've been the president of our on-campus makerspace for two years, assisting students in 3D printing, operation of shop tools, and programming and running our Shopbot CNC router. I also love to be outdoors - especially mountain biking, whether by my home in Phoenix or up at school in Prescott! I'm eager to continue my work in engineering as I graduate college and move on to developing in my career. I appreciate you taking the time to browse my site, and thanks for stopping by!
+                  Hello, and thanks for visiting my site! I'm Ben, a mechanical engineering student at Embry-Riddle Aeronautical University, graduating in May 2026. Currently working as a Machining Assistant at ERAU's campus machine shop, I help students with CNC and manual machining while producing parts from conception to completion. I've also worked as a Product Designer at Dyno-Comp Performance Tuning, where I conducted 3D scans and CFD analysis for performance vehicles. I love being outdoors - especially mountain biking, whether by my home in Phoenix or up in Prescott! I'm eager to grow my career in engineering and apply my diverse skill set to challenging projects. Thanks for taking the time to browse my site!
                 </p>
               </div>
               <div className="text-center">

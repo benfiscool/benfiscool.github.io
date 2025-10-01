@@ -7,11 +7,27 @@ import { ArrowRight, Calendar } from 'lucide-react'
 // This should match the blog posts from your blog page
 const featuredProjects = [
   {
+    id: 5,
+    title: 'Senior Capstone Project: Foil Bearing Test Rig',
+    description: 'My senior capstone project sponsored by Honeywell Aerospace - developing a test rig to evaluate the lifespan of foil bearings used in gas turbine engines.',
+    date: '2025-01-20',
+    tags: ['Honeywell', 'Aerospace', 'Foil Bearings', 'Test Rig', 'Senior Project'],
+    category: 'Capstone'
+  },
+  {
     id: 1,
     title: 'Datsun Roadster Project',
     description: 'A 30-year restoration project involving reverse engineering, 3D scanning, and CNC machining to create a custom dashboard conversion kit for the Datsun community.',
     date: '2024-12-15',
     tags: ['Restoration', 'CNC', '3D Scanning', 'Reverse Engineering'],
+    category: 'Projects'
+  },
+  {
+    id: 6,
+    title: 'Robotic Golf Caddy',
+    description: 'Building an autonomous golf cart that uses computer vision and machine learning to follow me around the golf course while avoiding hazards like water and sand bunkers.',
+    date: '2024-10-01',
+    tags: ['Robotics', 'Computer Vision', 'Machine Learning', 'DIY', 'Golf'],
     category: 'Projects'
   }
 ]
@@ -79,43 +95,6 @@ export function Projects() {
               </Link>
             </motion.div>
           ))}
-          
-          {/* Placeholder projects to fill the grid */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="card-glass p-6 border-2 border-dashed border-gray-700 flex flex-col items-center justify-center text-center min-h-[300px]"
-          >
-            <div className="text-gray-500 mb-3">
-              <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-              </svg>
-            </div>
-            <h3 className="text-lg font-semibold text-gray-400 mb-2">More Projects Coming Soon</h3>
-            <p className="text-gray-500 text-sm">
-              Additional engineering projects and case studies will be featured here.
-            </p>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="card-glass p-6 border-2 border-dashed border-gray-700 flex flex-col items-center justify-center text-center min-h-[300px]"
-          >
-            <div className="text-gray-500 mb-3">
-              <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-              </svg>
-            </div>
-            <h3 className="text-lg font-semibold text-gray-400 mb-2">Engineering Projects</h3>
-            <p className="text-gray-500 text-sm">
-              Stay tuned for more detailed engineering analyses and project breakdowns.
-            </p>
-          </motion.div>
         </div>
         
         <motion.div

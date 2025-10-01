@@ -22,43 +22,75 @@ const blogPostData = {
     category: 'Projects',
     tags: ['Restoration', 'CNC', '3D Scanning', 'Reverse Engineering'],
     content: `
-      <p>Sometime in the early nineties, my dad brought home a 1968 Datsun Roadster and parked it in our backyard. There it sat for 30 years until he and I dug it out during my sophomore year of high school with plans of a full restoration. My goal at the time was to drive my girlfriend to senior prom in it. While that did not happen (not even close), it has turned out to be the most rewarding project I have worked on with all sorts of fun challenges along the way.</p>
+      <p>Sometime in the early nineties, my dad brought home a 1968 Datsun Roadster and parked it in our backyard. There it sat for 30 years until he and I dug it out during my sophomore year of high school with plans of a full restoration. My goal at the time was to drive my girlfriend to senior prom in it. When we first dug it out, it needed extensive mechanical work, hundreds of hours of body work, completely new wiring, and a full interior restoration. Among one of the big jobs was designing and manufacturing a custom dashboard from scratch.</p>
       
-      <p>I could write a book on all of the learnings along the way, so I'll spare you the boring bits about body filler and redoing the electrical harness, and rather talk about the fun part – the dashboard! You'll have to hear me out…</p>
-
-      <p>The 1968 Roadster came with a vinyl covered foam padded dashboard. It was ugly and did not at all match the style of the rest of the car. In fact, throughout the span of the Roadster's production, the design never drastically changed. The only big difference is the ugly interior they put in for the 1968 model year. We decided that rather than restoring the ugly blob dash that was in there, we favored the look of the flat dash that had been in the earlier cars.</p>
+      <p>The 1968 Roadster came with a vinyl-covered foam padded dashboard. It was ugly and did not at all match the style of the rest of the car. Throughout the span of the Roadster's production, the design of the car never drastically changed – except for the dashboard that came in the 1968 model year. We decided that rather than restoring the stock molded padded dash, we would rather swap in a flat dash from the earlier model cars.</p>
 
       <div className="my-8">
-        <img src="/blog/datsun-roadster/image-1.jpeg" alt="1968 Datsun Roadster Dashboard" className="w-full rounded-lg shadow-lg mb-2" />
-        <p className="text-sm text-gray-400 text-center italic">1968 Datsun Roadster Dashboard</p>
+        <img src="/blog/datsun-roadster/image-1.jpeg" alt="1968 Datsun 1600 Roadster - Sports Car Market" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">1968 Datsun Roadster Dashboard (source: sportscarmarket.com)</p>
       </div>
 
-      <p>I did a lot of research on flat dash conversions for our car and found that it is a very involved process. It requires creating new brackets, lengthening wires, and cutting and welding of the dash, among others. All of this comes after forking out hundreds of dollars for a used, rusted out flat dash from a parts car. We therefore decided not to do a flat dash swap and opted to spend several times as much time and money developing our own lookalike kit. That way anyone in the Datsun community could easily swap our kit into their late model cars.</p>
+      <p>I did a lot of research on flat dash conversions for our car and found it to be an involved process. It requires creating new brackets, lengthening wires, and cutting and welding of the dash, among others. All of this comes only after forking out hundreds of dollars for a used and rusted out original flat dash. We therefore decided not to do a flat dash swap and opted to spend several times as much time and money developing our own lookalike kit. That way anyone in the same situation as we were could easily swap our kit into their late model cars.</p>
 
       <div className="my-8">
-        <img src="/blog/datsun-roadster/image-2.jpeg" alt="1967 Datsun Roadster Dashboard" className="w-full rounded-lg shadow-lg mb-2" />
-        <p className="text-sm text-gray-400 text-center italic">1967 Datsun Roadster Dashboard</p>
+        <img src="/blog/datsun-roadster/image-2.jpeg" alt="A Datsun 1600 Fairlady Imported by a US Soldier in 1967 - eBay Motors Blog" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">1967 Datsun Roadster Dashboard (Source: ebay.com/motors/blog)</p>
       </div>
 
-      <p>We started by actually buying the roached and rotting dash out of a 1966 Roadster complete with the gauges appropriate for that year, along with a 3D scanner to digitize it. We decided on a budget Revopoint Pop 2 3D scanner, and used Fusion 360 to reverse engineer the original flat dash. This was the first time I'd ever had to reverse engineer anything, and it was made especially challenging due to it being an organic shape with compound curved features. After lots of trial and error, I was very happy with the result.</p>
+      <p>We started by buying a rotting dash out of a 1966 Roadster, along with a 3D scanner to digitize it. We decided on a budget Revopoint Pop 2 3D scanner, and I used Fusion 360 to reverse engineer the scan data from the original flat dash. This was the first time I'd ever had to do this, and it was made especially challenging due to it being an organic shape with compound curved features. After lots of trial and error, I was very happy with the result.</p>
 
-      <p>I never would have taken on this project without a plan to build it once the design was done. So, this project coincided with me starting my first semester of college and gaining access to a large CNC router. I still had no idea how to use it though. I initially practiced with CAM software by making little trinkets like a checkers board and decorative wood boxes. After many trial runs figuring out feeds and speeds, I prayed a little prayer and sent the G-code to the machine.</p>
+      <div className="my-8">
+        <img src="/blog/datsun-roadster/image-3.png" alt="Dashboard 3D Scan" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">Dashboard 3D Scan</p>
+      </div>
+
+      <div className="my-8">
+        <img src="/blog/datsun-roadster/image-4.jpeg" alt="Rendering of my Dashboard CAD Model" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">Rendering of my Dashboard CAD Model</p>
+      </div>
+
+      <p>This project coincided with me starting my first semester of college and gaining access to a large CNC router in the schools makerspace, which I eventually used to machine all the molds for the project. I had no idea how to use it at first though. I initially practiced the CAM software by making little trinkets like a checkers board and decorative wood boxes. After too many trial runs to count, I finally had the confidence to start cutting into my large foam layup.</p>
 
       <div className="my-8">
         <video controls className="w-full rounded-lg shadow-lg mb-4 max-w-full" style={{ maxWidth: '800px', margin: '0 auto', display: 'block' }}>
           <source src="/pictures (2).mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <p className="text-sm text-gray-400 text-center italic">CNC machining process</p>
+        <p className="text-sm text-gray-400 text-center italic">Video of the Mold Being Machined</p>
       </div>
 
-      <p>Everything ran perfectly smoothly the first time, albeit I could have cut the machining time in half, and that still would be conservative for just cutting foam. The real issue came when we then prepared the mold to pull a fiberglass part on. The mold release began to dissolve the foam. The next obvious solution was to machine a more permanent mold out of MDF that could be used for several parts. That was much the same as the foam mold, and in the end I was left with a very nice looking part.</p>
+      <div className="my-8">
+        <img src="/blog/datsun-roadster/image-5.jpeg" alt="The Finished Foam Mold" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">The Finished Foam Mold</p>
+      </div>
 
-      <p>While the dash still needs some finishing touches, it is very nearly done and has been one of my favorite projects to date. It was rewarding to mount it in the car and be one step closer to driving it, albeit three years late to make my high school senior prom.</p>
+      <p>Everything ran smoothly for my first full-size attempt, albeit I could have cut the machining time in half. The real issue came when we then prepared the mold for fiberglassing. I drove home one weekend to work on the car with my dad, excited to make the fiberglass dash from the new mold. However, the spray-on mold release we used began to dissolve the foam on contact, leaving it completely unusable. I arrived back at school that Sunday and immediately went back to the makerspace to machine a new mold out of MDF.</p>
+
+      <div className="my-8">
+        <img src="/blog/datsun-roadster/image-6.jpeg" alt="MDF Mold for the Dashboard Cap" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">MDF Mold for the Dashboard Cap</p>
+      </div>
+
+      <p>Next, I moved on to machining the mold for the face of the dashboard which was a slightly more difficult process. The vertical travel of the machine is only six inches and the mold itself is four inches tall. Coupled with an endmill with three inches of stick-out, this meant I had to machine the mold in two parts. After gluing the two pieces together, this too came out very nice.</p>
+
+      <div className="my-8">
+        <img src="/blog/datsun-roadster/image-7.jpeg" alt="MDF Mold for the Dashboard Face" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">MDF Mold for the Dashboard Face</p>
+      </div>
+
+      <p>We opted to drop the molds off at a fiberglass shop in downtown phoenix to have them professionally lay up the parts and gel-coat them. However, the dashboard still needed lots of work to make it look more finished. We decided to go with a brushed aluminum cover to go on the dash face which we ordered from a metal laser cutting shop. We then wrapped the dashboard cap in foam and then in vinyl. This gave it a professional look and feel, complete with a little bit of padding just like the original had.</p>
+
+      <div className="my-8">
+        <img src="/blog/datsun-roadster/image-8.jpeg" alt="Fiberglass Dash Mockup in the Car" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">Fiberglass Dash Mockup in the Car</p>
+      </div>
+
+      <p>While the dash still needs some finishing touches, it is very nearly done and has been one of my favorite projects to date. It was rewarding to mount it in the car and be one step closer to driving it, albeit nearly four years late to make my high school senior prom.</p>
 
       <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-        <img src="/blog/datsun-roadster/image-3.jpeg" alt="Finished dashboard view 1" className="w-full rounded-lg shadow-lg" />
-        <img src="/blog/datsun-roadster/image-4.jpeg" alt="Finished dashboard view 2" className="w-full rounded-lg shadow-lg" />
+        <img src="/blog/datsun-roadster/image-9.jpeg" alt="Finished dashboard view 1" className="w-full rounded-lg shadow-lg" />
+        <img src="/blog/datsun-roadster/image-10.jpeg" alt="Finished dashboard view 2" className="w-full rounded-lg shadow-lg" />
       </div>
       <p className="text-sm text-gray-400 text-center italic mt-2">(Nearly) Finished Dashboard</p>
     `
@@ -70,71 +102,27 @@ const blogPostData = {
     category: 'Projects',
     tags: ['CNC', 'Formula SAE', 'Manufacturing', 'Automation', 'Plasma Cutting'],
     content: `
-      <p>During my sophomore year of college, I had a good friend who was the president of the Formula SAE race team on campus. If you are unfamiliar with the concept, Formula SAE is a competition in which students from universities all around the world build small formula racecars to strict standardized specifications and then ultimately go head to head in races against other universities. This was a newly formed club at the time with no racecar yet.</p>
+      <p>Formula SAE is student design competition in which student-run teams from universities worldwide build small formula-style racecars to compete head to head. During my sophomore year of college, I joined our newly-formed team which, at the time, was in the process of designing their first car.</p>
       
-      <p>My friend, the club president, convinced me to join. While I did not have the time to attend all of the meetings due to being president of the makerspace, I was eager to help in any way I could. Ultimately I volunteered to aid in the production of the car.</p>
+      <p>I was eager to help in any way I could in order to get our racecar design built. The club's original plan for building the car was to use a tube coping jig consisting of a drill, a hole saw, and a clamp. There were dozens of cuts to be made and early testing revealed that small errors made during this process stacked up. This resulted in the chassis of the car being asymmetrical and difficult to weld.</p>
       
-      <h2>The Problem</h2>
-      <p>The club's original plan was to use a tube coping jig consisting of a drill, a hole saw, and a clamp. There were dozens of cuts to be made and early testing revealed that small errors made during this process stacked up. This resulted in the chassis of the car being asymmetrical and difficult to weld.</p>
+      <p>I instead proposed we build a CNC, or computer controlled, machine to aid in coping the tubing with a much higher accuracy than manually aligning and drilling each piece of tubing. While there are pre-existing services that do this, our club had very little money and could not afford to outsource tubing cutting and coping. We were also having a difficult time finding sponsors as it was a new club and we had nothing to show for our efforts besides a SolidWorks model.</p>
       
-      <h2>The Solution: Custom CNC Machine</h2>
-      <p>I instead proposed we build a CNC machine to aid in coping the tubing with a much higher accuracy and minimal human intervention. While there are services out there which will cut tubing for you, our club had very little money and could not afford it. We were also having no luck finding sponsors as it was new and had nothing to show for our efforts besides a SolidWorks model.</p>
+      <p>I reasoned that we could use a cheap CNC kit that would come with the barebones parts to get us up and running. In addition, the frame could be constructed out of cheap aluminum extrusion and a couple of custom laser-cut end pieces. This is what we ultimately decided to move forward with. With our limited budget, we bought a two-axis DIY CNC kit containing two stepper motors, two stepper drivers, a Mach3 CNC board, and some other miscellaneous hardware.</p>
       
-      <p>I reasoned that we could use a cheap CNC kit that would come with the barebones parts to get us up and running. In addition, the frame could be constructed out of cheap aluminum extrusion and a couple of custom laser cut end pieces. This is what we ultimately decided to move forward with.</p>
+      <p>I designed the machine in Fusion 360 and ordered the custom end plates for the chassis of the machine. I knew that the longest piece of continuous tubing on the car was just under one meter, so I designed the machine to be long enough to cut both ends of the tub in one go, eliminating the need to re-index the tube in between cuts. I also used the CNC router in our campus makerspace to cut several more pieces for the machine, namely a custom motor mount and the trolley on which the plasma torch was to be mounted.</p>
       
-      <h2>Design and Components</h2>
-      <p>With our limited budget, we bought a two axis kit containing two stepper motors, two stepper drivers, a Mach3 CNC board, and some other miscellaneous hardware. I designed the machine in Fusion 360 and ordered the end plates for it.</p>
-      
-      <div class="my-8">
-        <img src="/Blog2/IMG20250221200936.png" alt="Initial CNC machine frame assembly with aluminum extrusion" class="w-full rounded-lg shadow-lg mb-4" />
-        <p class="text-sm text-gray-400 text-center italic">Early assembly of the CNC frame using aluminum extrusion and custom end plates</p>
+      <div className="my-8">
+        <img src="/blog/cnc-tubing-coper-updated/image-1.png" alt="Tubing Coper CAD Model" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">Tubing Coper CAD Model</p>
       </div>
       
-      <p>I knew that the longest piece of continuous tubing on the car was just under one meter, so I designed the machine to be long enough to cut both ends of the tube in one go, eliminating the need to re-index the tube in between cuts.</p>
-      
-      <div class="my-8">
-        <img src="/Blog2/IMG20250221200946.png" alt="CNC machine linear motion system and rails" class="w-full rounded-lg shadow-lg mb-4" />
-        <p class="text-sm text-gray-400 text-center italic">Linear motion system with precision rails for accurate positioning</p>
+      <div className="my-8">
+        <img src="/blog/cnc-tubing-coper-updated/image-2.jpeg" alt="CNC Tubing Coper" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">CNC Tubing Coper</p>
       </div>
       
-      <h2>Manufacturing and Assembly</h2>
-      <p>I also used the CNC router to cut several more pieces for the machine, namely a custom motor mount and the trolley on which the plasma torch was to be mounted. Under a tight time crunch and before I had to leave for spring break, I had a friend and fellow club member help with the wiring and software setup while I moved on to assembling the machine and machining an electronics enclosure.</p>
-      
-      <div class="my-8">
-        <img src="/Blog2/IMG20250221200955.png" alt="Close-up of CNC machine components and wiring" class="w-full rounded-lg shadow-lg mb-4" />
-        <p class="text-sm text-gray-400 text-center italic">Detailed view of the motor mounts and mechanical components</p>
-      </div>
-      
-      <div class="my-8">
-        <img src="/Blog2/IMG20250312180326.png" alt="CNC machine electronics and control system" class="w-full rounded-lg shadow-lg mb-4" />
-        <p class="text-sm text-gray-400 text-center italic">Electronics enclosure housing the Mach3 CNC board and stepper drivers</p>
-      </div>
-      
-      <h2>Final Assembly and Testing</h2>
-      <p>As the machine came together, we could see the potential for precise, repeatable cuts that would solve the Formula SAE team's accuracy problems. The combination of stepper motor precision and rigid aluminum construction promised the accuracy we needed.</p>
-      
-      <div class="my-8">
-        <img src="/Blog2/IMG20250312180330.png" alt="Nearly completed CNC tubing coper machine" class="w-full rounded-lg shadow-lg mb-4" />
-        <p class="text-sm text-gray-400 text-center italic">The machine nearing completion with all major components installed</p>
-      </div>
-      
-      <div class="my-8">
-        <img src="/Blog2/IMG20250312180337.png" alt="CNC machine ready for plasma torch mounting" class="w-full rounded-lg shadow-lg mb-4" />
-        <p class="text-sm text-gray-400 text-center italic">Custom trolley system ready for plasma torch integration</p>
-      </div>
-      
-      <h2>Results and Handoff</h2>
-      <p>Ultimately, this was the last time I got to work on my creation as I had to turn it over to the chassis team of the club where they mounted the plasma torch and calibrated it. They shared with me that it was performing test cuts and working well, and that they hope to start the chassis build this coming semester (Fall 2025).</p>
-      
-      <div class="my-8">
-        <img src="/Blog2/IMG20250312180347.png" alt="Final view of completed CNC tubing coper" class="w-full rounded-lg shadow-lg mb-4" />
-        <p class="text-sm text-gray-400 text-center italic">The completed CNC tubing coper ready for Formula SAE chassis production</p>
-      </div>
-      
-      <h2>Lessons Learned</h2>
-      <p>This project taught me valuable lessons about working within tight budgets and time constraints while still delivering a functional solution. The experience of designing a custom CNC machine from scratch, integrating off-the-shelf components, and collaborating with a team under pressure was invaluable for my engineering development.</p>
-      
-      <p>The project demonstrated that with creativity and resourcefulness, student teams can build sophisticated manufacturing tools that rival commercial solutions, all while staying within the constraints of a limited budget. The CNC tubing coper not only solved the immediate problem of chassis accuracy but also gave the Formula SAE team a competitive advantage in their manufacturing process.</p>
+      <p>Under a tight time crunch and before I had to leave for spring break, I had a friend and fellow club member help with the wiring and software setup while I moved on to assembling the machine and machining the remaining parts. Ultimately, this was the last time I got to work on my creation as I had to turn it over to the chassis team of the club where they mounted the plasma torch and calibrated it. They shared with me that it was performing test cuts and working well, and that they hope to start the chassis build this coming semester (Fall 2025).</p>
     `
   },
   3: {
@@ -220,16 +208,30 @@ const blogPostData = {
     `
   },
   5: {
-    title: 'Honeywell Capstone Project',
-    excerpt: 'My senior capstone project sponsored by Honeywell - an innovative engineering solution that showcases advanced technical skills and industry collaboration.',
+    title: 'Senior Capstone Project: Foil Bearing Test Rig',
+    excerpt: 'My senior capstone project sponsored by Honeywell Aerospace - developing a test rig to evaluate the lifespan of foil bearings used in gas turbine engines.',
     date: '2025-01-20',
     category: 'Capstone',
-    tags: ['Honeywell', 'Senior Project', 'Industry Sponsorship', 'Engineering'],
+    tags: ['Honeywell', 'Aerospace', 'Foil Bearings', 'Test Rig', 'Senior Project'],
     content: `
-      <h2>Coming Soon!</h2>
-      <p>Details about this exciting Honeywell-sponsored capstone project will be posted here soon. This project represents the culmination of my engineering education and showcases cutting-edge technical solutions developed in collaboration with industry experts.</p>
+      <p>As part of the school curriculum for engineering students at Embry-Riddle, all seniors in the program must complete a Capstone project. These projects are two semesters long and consist of preliminary design and detailed design. As an undergraduate student, they are an excellent way to tackle real-world engineering problems in a way that resembles what soon-to-be graduates will experience in industry. Capstone projects are completed in groups ranging anywhere from 5 to 15 students.</p>
       
-      <p>Stay tuned for an in-depth look at the challenges, solutions, and outcomes of this super cool project!</p>
+      <p>During the preliminary design phase, students are tasked with developing project requirements, performing trade studies, and delivering design reviews to name a few of the many steps in the design process. Although some teams must come up with their own ideas for capstone projects, my team was fortunate enough to receive a sponsorship from Honeywell Aerospace. They approached us with a proposal to create a test rig so that the lifespan of a foil bearing used in a gas turbine engine can be estimated.</p>
+      
+      <p>To give some basic background on the project, foil bearings are contactless while spinning, and rely on a thin film of high-pressure air to keep the shaft suspended and constrained. Surrounding the shaft is a series of foils, which are thin metal sheets bent into various shapes depending on the application. Given ingestion of small, high velocity particles over time, these foils are subjected to wear due to abrasion. Hence the need to determine the engine runtime before these bearings need to be repaired or replaced.</p>
+      
+      <div className="my-8">
+        <img src="/blog/capstone/image-1.png" alt="Diagram of a Basic Foil Bearing" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">Diagram of a Basic Foil Bearing (Source: ntrs.nasa.gov)</p>
+      </div>
+      
+      <p>We were given a document from Honeywell detailing the "why" of this test rig and giving basic requirements. Throughout the course of our meetings with our engineering contact at Honeywell, we have ascertained more about what the company requires of the machine and have developed a comprehensive set of high-level stakeholder requirements for the project.</p>
+      
+      <p>Given Honeywell's needs, we created a block diagram of the system which included the main subsystems and how each of them interface with each other. This includes basic high-level components and connections. I then created several mathematical models in Matlab to validate whether our initial layout and assumptions would work. These include parameters like power required to heat the inlet air, torque required to maintain our target speed, and so on. We use the outcomes of these models to size components and refine our system architecture.</p>
+      
+      <p>With a basic system layout established, we are now moving on to conducting trade studies on various components required for the project. These include components like seals, motors, heaters, various controllers, and much more! The goal of these trade studies is to further refine our system based on several criteria including cost, safety, reliability, and ability to meet project requirements.</p>
+      
+      <p>While I wish I could talk more about what makes this project so awesome, I appreciate you for taking the time to read a little bit about my Capstone project and be sure to check back for future updates!</p>
     `
   },
   6: {
