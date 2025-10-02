@@ -132,45 +132,54 @@ const blogPostData = {
     category: 'Projects',
     tags: ['DIY', 'Electric Vehicle', 'PID Control', 'VESC', 'Fabrication'],
     content: `
-      <p>I remember years ago seeing ads while I was scrolling through Instagram for a balancing skateboard sorta thing called a OneWheel. I was shocked when I clicked the link and saw the price, only to file the dream of owning one away and not look back. Later on when I got to college, my roommate brought two with him. He let me borrow his smaller one for just a few days, and then I was hooked. I wanted one so bad, but I still couldn't justify the price.</p>
+      <p>I remember years ago seeing ads while I was scrolling through Instagram for an electric skateboard that balances on one central motorized wheel, aptly named 'OneWheel'. I was shocked when I clicked the link and saw the price, and promptly filed the dream of owning one away. Later on when I got to college, my roommate brough two of them with him. He let me borrow his smaller one for just a few days, and I was hooked. I wanted one badly, but I still couldn't justify the price.</p>
       
-      <h2>The Inspiration and Challenge</h2>
-      <p>I had built an electric skateboard in middle school so then I thought that if I could build that, there's no reason that I couldn't also build a balancing version that just has one big wheel in the center instead of four wheels arranged in a rectangle. In the end, I decided that I would attempt to build one, and worst case I end up with a bunch of parts that I could use to build another project.</p>
+      <p>I had built an electric skateboard in middle school so I reasoned that I could probably just build my own version of a OneWheel. I decided that I would attempt to build one, and worst case I end up with a bunch of parts that I could use to build another project. I started as I always do – research, research, research. This led me to exactly what I was looking for on a website called Spintend.com. I ended up with a 125A speed controller with a built-in magnetometer and accelerometer to handle the self-balancing. The speed controller, or ESC, runs on an open-source software called VESC and allows for basically infinite ways to control the motor. In my case, I set it up in a "balance" mode which uses a PID controller to keep the board upright based on the input from the onboard sensors. There is a large community built around these motor controllers so it was easy to find PID gains for a good baseline, which I then tuned to my liking later on.</p>
       
-      <h2>The Heart of the System: VESC Controller</h2>
-      <p>I ended up with a 125A speed controller with a built in magnetometer and accelerometer from a website called Spintend. The speed controller, or ESC, runs on an open source software called VESC and allows for basically infinite ways to control the motor. In my case, I set it up in a "balance" mode which uses a PID controller to keep the board upright based on the input from the onboard sensors.</p>
+      <div className="my-8">
+        <video controls className="w-full rounded-lg shadow-lg">
+          <source src="/blog/diy-balancing-skateboard/ow motor test.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <p className="text-sm text-gray-400 text-center italic mt-2">Initial Test of the Motor</p>
+      </div>
       
-      <p>There is a large community built around these motor controllers so it was easy to find PID gains for a good baseline, which I then tuned to my liking. The VESC community's open-source approach meant I had access to countless configurations and could learn from others who had tackled similar projects.</p>
+      <div className="my-8">
+        <img src="/blog/diy-balancing-skateboard/image-1.jpeg" alt="An Array of Parts Scattered on my Dorm Floor" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">An Array of Parts Scattered on my Dorm Floor</p>
+      </div>
       
-      <h2>Building the Chassis</h2>
-      <p>For the chassis of the skateboard itself, I went to the local metal yard and picked up a 6' length of 1x2 inch aluminum 1/8th wall C-channel. I cut it down according to my CAD model and 3D printed the end caps that join the two sides. I also marked and drilled holes for the motor shaft and the power button, while using self-tapping sheet metal screws to hold everything else on.</p>
+      <p>For the chassis of the skateboard itself, I created a CAD model as per usual, utilizing as many off-the-shelf components as possible.</p>
       
-      <p>The aluminum C-channel provided the perfect balance of strength and weight, while being easy to machine and modify. The modular design with 3D printed end caps allowed me to iterate quickly on the design and make adjustments as needed during the build process.</p>
+      <div className="my-8">
+        <img src="/blog/diy-balancing-skateboard/image-2.png" alt="CAD Model of my One-Wheeled Electric Skateboard" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">CAD Model of my One-Wheeled Electric Skateboard</p>
+      </div>
       
-      <h2>Foot Pads and Control System</h2>
-      <p>The pads for my feet were simple rectangles cut out of half inch plywood with a radius sanded into the corners. I mounted large pressure sensors to the front foot pad so the board could recognize when I am on it and when I wish to stop by lifting my front heel.</p>
+      <p>I went to the local metal yard and picked up a 6' length of 1x2 inch aluminum 1/8th wall C-channel. I cut it down according to my cad model and 3D printed the end caps that join the two sides. I also marked and drilled holes for the motor shaft and the power button, while using self-tapping sheet metal screws to hold everything else on.</p>
       
-      <p>This pressure sensing system was crucial for safety - the board needed to know when I was actively riding versus when I had dismounted. The front heel lift detection became my primary method for controlled stops, mimicking the intuitive control scheme of commercial boards.</p>
+      <div className="my-8">
+        <img src="/blog/diy-balancing-skateboard/image-3.jpeg" alt="In-Progress Picture of the Assembly" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">In-Progress Picture of the Assembly</p>
+      </div>
       
-      <h2>Tuning and Performance</h2>
-      <p>The PID tuning process was both challenging and rewarding. Starting with community-recommended values, I spent hours adjusting the proportional, integral, and derivative gains to achieve the perfect balance response. Too aggressive and the board would oscillate wildly; too conservative and it wouldn't respond quickly enough to maintain balance.</p>
+      <div className="my-8">
+        <video controls className="w-full rounded-lg shadow-lg">
+          <source src="/blog/diy-balancing-skateboard/ow test vid.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <p className="text-sm text-gray-400 text-center italic mt-2">Initial Test of the Board</p>
+      </div>
       
-      <p>The final tuning resulted in a board that was stable enough for beginners but responsive enough for more advanced maneuvers. The 125A controller provided plenty of power for climbing hills and accelerating, while the built-in sensors delivered the precision needed for smooth balance control.</p>
+      <p>The pads for my feet were simple rectangles cut out of half inch plywood with a radius sanded into the corners. I mounted large pressure sensors to the front foot pad so the board could recognize when I am on it and when I wish to stop by lifting my front heel. This turned out to be a very fun and successful project in the end and I still use it to get around! For the first couple months of riding it around campus, I got stopped countless times by people wanting to know what it was, how I made it, or wanting to try it.</p>
       
-      <h2>Campus Celebrity</h2>
-      <p>This turned out to be a very fun and successful project in the end and I still use it to get around! For the first couple months of riding it around campus, I got stopped countless times by people wanting to know what it was, how I made it, or wanting to try it.</p>
-      
-      <p>The attention the board attracted was unexpected but rewarding. It sparked countless conversations about engineering, DIY projects, and problem-solving. Many students were amazed that something they thought required a huge company and expensive manufacturing could be built by a college student in their spare time.</p>
-      
-      <h2>Lessons Learned</h2>
-      <p>Building the DIY balancing skateboard taught me valuable lessons about control systems, mechanical design, and the importance of safety features. The project demonstrated that with the right components and some engineering ingenuity, complex commercial products can often be replicated and even improved upon.</p>
-      
-      <p>More importantly, it showed me the power of open-source communities like VESC, where knowledge sharing accelerates innovation and makes complex projects accessible to hobbyists and students. The project cost a fraction of a commercial OneWheel while providing an invaluable learning experience.</p>
-      
-      <h2>Future Improvements</h2>
-      <p>While the current version works great, I've already identified several areas for improvement. Better weatherproofing, more sophisticated foot pad sensors, and perhaps even smartphone connectivity for diagnostics and tuning adjustments are all on my wishlist for version 2.0.</p>
-      
-      <p>The modular design philosophy I adopted makes these upgrades entirely feasible - a testament to the value of planning for iteration from the beginning of any engineering project.</p>
+      <div className="my-8">
+        <video controls className="w-full rounded-lg shadow-lg">
+          <source src="/blog/diy-balancing-skateboard/ow final ride.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <p className="text-sm text-gray-400 text-center italic mt-2">First Ride of the Board Around Campus</p>
+      </div>
     `
   },
   4: {
