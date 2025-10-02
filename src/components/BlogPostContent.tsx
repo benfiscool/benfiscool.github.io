@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Calendar, ArrowLeft, User } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { usePortfolioAnalytics } from '@/lib/analytics'
 
 interface BlogPost {
   title: string
@@ -22,6 +23,15 @@ interface BlogPostContentProps {
 }
 
 export default function BlogPostContent({ post, postId }: BlogPostContentProps) {
+  const { trackBlogPostView } = usePortfolioAnalytics()
+
+  // Track blog post view when component mounts
+  useEffect(() => {
+    if (post) {
+      trackBlogPostView(postId, post.title)
+    }
+  }, [post, postId, trackBlogPostView])
+
   if (!post) {
     return (
       <div className="min-h-screen bg-gray-950 text-gray-100 pt-20 flex items-center justify-center">

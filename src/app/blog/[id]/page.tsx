@@ -183,37 +183,44 @@ const blogPostData = {
     `
   },
   4: {
-    title: 'CNC Machined Custom Shift Knob',
+    title: 'Custom CNC Machined Shift Knob',
     excerpt: 'Learning CNC machining through hands-on experience creating a custom aluminum shift knob using both lathe and mill operations in a machine shop class.',
     date: '2024-09-20',
     category: 'Projects',
     tags: ['CNC Machining', 'Lathe', 'Mill', 'Aluminum', 'CAM Programming'],
     content: `
-      <p>During the Spring semester of my junior year in college, I had the opportunity to take a machine shop class, something I'd been wanting to do for years. Over the course of the semester, we learned how to safely and properly use a wide range of tools including lathes, mills, as well as MIG (GMAW) and TIG (GTAW) welders. While I had used these tools before, I had never had the chance to use a CNC mill or lathe (aside from a CNC router). So, when assigned a final project of our own personal choosing, I jumped at the opportunity of having free reign over these machines.</p>
+      <p>During the Spring semester of my junior year in college, I had the opportunity to take a machine shop class, something I'd been wanting to do for years. Over the course of the semester, we learned how use a wide range of tools including lathes, mills, as well as MIG (GMAW) and TIG (GTAW) welders. While I had used most of these before, I had never had the chance to use a CNC mill or lathe (aside from a CNC router). So, when assigned a final project of our own personal choosing, I jumped at the opportunity of having free reign over these machines.</p>
       
-      <h2>Project Planning and Challenges</h2>
-      <p>We were only allotted three class sessions to work on our projects, so I couldn't create anything too fancy or with many parts. We were also required to use three or more processes to make it (mill, lathe, waterjet, welding, etc.). Ultimately, I decided to make a shift knob for my car thinking it would be quick and easily doable in three class sessions (boy was I wrong).</p>
+      <p>We were only allotted three class sessions to work on our projects, so I couldn't create anything too fancy or with many parts. We were also required to use three or more processes to make it (mill, lathe, waterjet, welding, etc.). Ultimately, I decided to make a shift knob for my car thinking it would be quick and easily doable in three class sessions (I was wrong). In the end, I spent 20-ish hours in the machine shop making friends with the staff and asking them for help on my project.</p>
       
-      <p>There are a lot of things that one can pick up quickly. Learning to do CAM on a machine and a whole process that you have never done before is not one of them. In the end, I spent 20-ish hours in the machine shop making friends with the staff and asking them for help on my project.</p>
+      <div className="my-8">
+        <img src="/blog/cnc-shift-knob/image-1.png" alt="Custom Shift Knob CAD Model" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">Custom Shift Knob CAD Model</p>
+      </div>
       
-      <h2>Learning from the Experts</h2>
-      <p>Despite asking for help, I did not allow any hand-holding. I would ask for as little information as possible, just enough to not crash a big and expensive CNC machine. There are two machinists, each with decades of experience each, who were happy to share their expertise with me. While I know I could do it again, it was very tough to wrap my head around the setup the first time – how and where to mount the lathe tools, what order of operations is best, you name it! I greatly appreciate the advice they gave me.</p>
+      <p>Despite asking for help, I did not want any hand-holding. I would ask for as little information as possible, just enough to not crash a big and expensive CNC machine. There are two machinists, each with decades of experience each, who were happy to share their expertise with me. While I know I could do it again, it was very tough to wrap my head around the setup the first time – how and where to mount the lathe tools, what order of operations is best, you name it! I greatly appreciate the advice they gave me.</p>
       
-      <h2>Manufacturing Process</h2>
-      <p>In the end, I settled on a process that worked out well. I cut 3 inch diameter aluminum bar stock to length on a band saw. Then I chucked it up in the Haas TL-2 CNC lathe and ran my program, but not before mounting and setting the zero on all of my tools and the stock itself. I made sure to leave the shift ball attached to the stock so that it could be easily mounted in a milling vice or back in the lathe for future operations.</p>
+      <div className="my-8">
+        <video controls className="w-full rounded-lg shadow-lg">
+          <source src="/blog/cnc-shift-knob/CAM Path.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <p className="text-sm text-gray-400 text-center italic">Computer-Aided Manufacturing (CAM) Simulation</p>
+      </div>
       
-      <h2>Decorative Top Plate</h2>
-      <p>After that, I drilled a 6 hole evenly spaced mounting pattern for a decorative plate atop. I then cut another piece of stock to be used as the top plate on the band saw. We didn't have aluminum sheet of the proper thickness so I used 1.5 inch round bar stock. I put it in the manual Bridgeport mill and drilled the corresponding mounting pattern in it with clearance fit holes for machine screws to pass through.</p>
+      <p>I eventually settled on a process that worked out well. I cut aluminum bar stock to length on a band saw. Then I chucked it up in the Haas TL-2 CNC lathe and ran my program, but not before mounting and setting the zero on all of my tools and the stock itself. I made sure to leave the shift ball attached to the stock so that it could be easily mounted in a milling vice or back in the lathe for future operations. After that, I drilled and tapped 6 evenly spaced holes radially around the top of the shift knob. I then cut another piece of stock to be used as the top plate on the band saw. We didn't have aluminum sheet of the proper thickness so I used a smaller piece of bar stock. I put it in the manual Bridgeport mill and drilled the corresponding mounting pattern in it. Then I mounted the stock in a lathe to cut to the right diameter and then parted off the plate, ensuring to check that it was within tolerance from my CAD model and corresponding drawing. I then mounted the plate on top of the shift knob using six M2.5 machine screws, and mounted the whole assembly in the CNC mill. After zeroing off the part and tools with a probe, I ran a program to engrave the shift pattern into the decorative top plate. Lastly, I mounted the shift knob back in the lathe using the stock I had left, and then brushed it with a scotch-brite pad before parting it off.</p>
       
-      <p>Then I mounted the stock in a lathe to cut to the right diameter and then parted off the plate, ensuring to check that it was within tolerance from my CAD model and corresponding drawing. I then mounted the plate on top of the shift knob using six M2.5 machine screws, and mounted the whole assembly in the CNC mill.</p>
+      <div className="my-8">
+        <img src="/blog/cnc-shift-knob/image-2.jpeg" alt="In-Progress Shot of Shift Knob on the Lathe" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">In-Progress Shot of Shift Knob on the Lathe</p>
+      </div>
       
-      <h2>Final Operations</h2>
-      <p>After zeroing off the part and tools with a probe, I ran a program to engrave the shift pattern into the decorative top plate. Lastly, I mounted the shift knob back in the lathe using the stock I had left, and then brushed it with a scotch-brite pad before parting it off.</p>
+      <p>I was - and still am - thrilled with the end result. One small issue that I failed to consider until I had already started the project is that the knob gets too hot to touch after having sat outside in the phoenix heat. It's a shame that I have to keep a microfiber cloth on it just to be able to use it, but come wintertime, it'll be a show stopper!</p>
       
-      <h2>Results and Lessons Learned</h2>
-      <p>I was and still am thrilled with the end result. One small issue that I failed to consider until I had already started the project is that the knob gets hot enough to boil water after having sat outside in the Phoenix heat for a work day. It's a shame that I have to keep a microfiber cloth on it just to be able to use it, but come wintertime, it'll be a show stopper!</p>
-      
-      <p>This project taught me valuable lessons about CNC programming, machining operations sequencing, and the importance of considering real-world use conditions in design. The hands-on experience with both CNC lathe and mill operations provided invaluable skills that I continue to use in other projects.</p>
+      <div className="my-8">
+        <img src="/blog/cnc-shift-knob/image-3.jpeg" alt="Shift Knob Installed in my Car" className="w-full rounded-lg shadow-lg mb-2" />
+        <p className="text-sm text-gray-400 text-center italic">Shift Knob Installed in my Car</p>
+      </div>
     `
   },
   5: {

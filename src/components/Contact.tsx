@@ -1,4 +1,10 @@
+'use client'
+
+import { usePortfolioAnalytics } from '@/lib/analytics'
+
 export function Contact() {
+  const { trackEmailClick, trackLinkedInClick } = usePortfolioAnalytics()
+
   return (
     <section className="py-20 px-6 bg-gray-900/50">
       <div className="container mx-auto max-w-4xl text-center">
@@ -13,6 +19,7 @@ export function Contact() {
           <a 
             href="mailto:bencfreeman@outlook.com"
             className="bg-stark-600 hover:bg-stark-700 text-white font-bold py-3 px-6 rounded transition-all duration-300"
+            onClick={trackEmailClick}
           >
             Email Me
           </a>
@@ -21,6 +28,7 @@ export function Contact() {
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gray-800 hover:bg-gray-700 text-stark-400 font-bold py-3 px-6 rounded border border-stark-500 transition-all duration-300"
+            onClick={trackLinkedInClick}
           >
             LinkedIn
           </a>

@@ -4,6 +4,7 @@ import { Inter, Fira_Code } from 'next/font/google'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { MatrixBackground } from '@/components/MatrixBackground'
+import { Analytics } from '@/components/Analytics'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const firaCode = Fira_Code({ subsets: ['latin'], variable: '--font-fira-code' })
@@ -39,6 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.variable} ${firaCode.variable} font-sans antialiased`}>
+        <Analytics />
         <MatrixBackground />
         <div className="relative z-10 min-h-screen flex flex-col">
           <Header />

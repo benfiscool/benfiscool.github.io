@@ -2,9 +2,15 @@
 
 import { useState } from 'react'
 import { X, Mail, User } from 'lucide-react'
+import { usePortfolioAnalytics } from '@/lib/analytics'
 
 export function Footer() {
   const [showContact, setShowContact] = useState(false)
+  const { trackEmailClick } = usePortfolioAnalytics()
+
+  const handleEmailClick = () => {
+    trackEmailClick()
+  }
 
   return (
     <>
@@ -51,6 +57,7 @@ export function Footer() {
                 <a 
                   href="mailto:bencfreeman@outlook.com"
                   className="text-stark-300 hover:text-stark-200 transition-colors font-medium"
+                  onClick={handleEmailClick}
                 >
                   bencfreeman@outlook.com
                 </a>
