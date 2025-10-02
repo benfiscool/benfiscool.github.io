@@ -2,11 +2,12 @@
 
 import Script from 'next/script'
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+// Fallback GA ID if environment variable isn't available
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-F17HES5VJC'
 
 export function Analytics() {
-  // Only load analytics in production
-  if (process.env.NODE_ENV !== 'production' || !GA_MEASUREMENT_ID) {
+  // Load analytics if we have the measurement ID
+  if (!GA_MEASUREMENT_ID) {
     return null
   }
 

@@ -6,6 +6,9 @@ const nextConfig = {
     unoptimized: true,
     domains: ['images.unsplash.com', 'via.placeholder.com'],
   },
+  env: {
+    NEXT_PUBLIC_GA_MEASUREMENT_ID: 'G-F17HES5VJC',
+  },
   experimental: {
     turbo: {
       rules: {
