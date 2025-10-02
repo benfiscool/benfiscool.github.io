@@ -12,6 +12,7 @@
     "import:docx": "node scripts/convert-docx.js"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@tailwindcss/typography": "^0.5.15",
     "autoprefixer": "^10.4.21",
     "clsx": "^2.1.1",
