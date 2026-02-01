@@ -5,20 +5,6 @@ import Image from 'next/image';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
 const photos = [
-  'IMG_20230329_115359.jpg',
-  'IMG_20230401_191103.jpg',
-  'IMG_20230402_201740.jpg',
-  'IMG20251001161240.jpg',
-  'IMG20230713145841.jpg',
-  'IMG20230713145854.jpg',
-  'IMG20230805161929.jpg',
-  'IMG20230822182945.jpg',
-  'IMG20231029161848.jpg',
-  'IMG20231030124140.jpg',
-  'IMG20231030191118.jpg',
-  'IMG20231216195208.jpg',
-  'IMG20231223154233.jpg',
-  'IMG20231223154247.jpg',
   'IMG20240522161603.jpg',
   'IMG20240623094948.jpg',
   'IMG20240709215119.jpg',
@@ -33,7 +19,21 @@ const photos = [
   'IMG20250421170705.jpg',
   'IMG20250423184821.jpg',
   'image.png',
-  'IMG20250526171522.jpg'
+  'IMG20250526171522.jpg',
+  'IMG_20230329_115359.jpg',
+  'IMG_20230401_191103.jpg',
+  'IMG_20230402_201740.jpg',
+  'IMG20251001161240.jpg',
+  'IMG20230713145841.jpg',
+  'IMG20230713145854.jpg',
+  'IMG20230805161929.jpg',
+  'IMG20230822182945.jpg',
+  'IMG20231029161848.jpg',
+  'IMG20231030124140.jpg',
+  'IMG20231030191118.jpg',
+  'IMG20231216195208.jpg',
+  'IMG20231223154233.jpg',
+  'IMG20231223154247.jpg'
 ];
 
 export default function PhotoAlbum() {
