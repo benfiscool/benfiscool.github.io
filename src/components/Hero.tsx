@@ -70,7 +70,7 @@ export function Hero() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1.2, duration: 0.6 }}
                 >
-                  Mechanical Engineering Student
+                  Mechanical Engineer
                 </motion.p>
 
                 <motion.p

@@ -50,7 +50,7 @@ export function Footer() {
               </div>
               
               <h3 className="text-2xl font-bold text-white mb-2">Benjamin Freeman</h3>
-              <p className="text-gray-400 mb-6">Mechanical Engineering Student</p>
+              <p className="text-gray-400 mb-6">Mechanical Engineer</p>
               
               <div className="flex items-center justify-center gap-3 p-4 bg-gray-800 rounded-lg">
                 <Mail className="w-5 h-5 text-stark-400" />

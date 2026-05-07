@@ -11,7 +11,7 @@ export default function ResumePage() {
         {/* Download Button */}
         <div className="flex justify-center mb-8">
           <a 
-            href="/Ben Freeman Resume 2.15.26.pdf" 
+            href="/Ben Freeman Resume 5.7.2026.pdf" 
             download
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-300 flex items-center gap-2"
           >
@@ -42,7 +42,7 @@ export default function ResumePage() {
           <div className="card-glass p-8">
             <h2 className="text-2xl font-bold mb-4 text-blue-400">Summary</h2>
             <p className="text-gray-300 leading-relaxed">
-              Detail-oriented Mechanical Engineering student with a 3.9 GPA and a strong foundation in fabrication, CAD design, welding, and machining. Experienced in hands-on workshop environments through academic and industry roles. Passionate about engineering and eager to contribute to campus shop operations through safe, efficient, and high-quality work.
+              Detail-oriented and highly adaptable mechanical engineer seeking an entry-level engineering position. With a strong foundation in CAD design, mathematics, machining, and various software packages, I'm eager to gain my start in the field of mechanical engineering.
             </p>
           </div>
 
@@ -53,9 +53,9 @@ export default function ResumePage() {
               <div>
                 <h3 className="text-xl font-semibold text-white">B.S. Mechanical Engineering, Propulsion</h3>
                 <p className="text-blue-300">Embry – Riddle Aeronautical University • Prescott, AZ</p>
-                <p className="text-gray-400">Graduation – May 2026</p>
+                <p className="text-gray-400">Aug 2022 – May 2026</p>
                 <ul className="mt-2 text-gray-300">
-                  <li>• GPA: 3.9</li>
+                  <li>• GPA: 3.93</li>
                 </ul>
               </div>
             </div>
@@ -67,9 +67,9 @@ export default function ResumePage() {
             <div className="space-y-6">
               
               <div>
-                <h3 className="text-xl font-semibold text-white">Machining Assistant</h3>
-                <p className="text-blue-300">ERAU Campus Machine Shop (AXFAB) • Prescott, AZ</p>
-                <p className="text-gray-400">Aug 2025 - Present</p>
+                <h3 className="text-xl font-semibold text-white">Machine Shop Student Employee</h3>
+                <p className="text-blue-300">Embry-Riddle Campus Machine Shop • Prescott, AZ</p>
+                <p className="text-gray-400">Aug 2025 – May 2026</p>
                 <ul className="mt-2 space-y-1 text-gray-300">
                   <li>• Produce parts from conception to completion using CAD, CAM, and CNC/manual lathes and mills.</li>
                   <li>• Assist students in best practices and safe operation of manual and CNC machines.</li>
@@ -82,8 +82,20 @@ export default function ResumePage() {
                 <p className="text-blue-300">Dyno-Comp Performance Tuning • Scottsdale, AZ</p>
                 <p className="text-gray-400">May 2024 – Aug 2025</p>
                 <ul className="mt-2 space-y-1 text-gray-300">
-                  <li>• Conducted 3D scans and CFD analysis to improve the cooling and aerodynamics of performance vehicles.</li>
-                  <li>• Designed and 3D-printed custom components to customer specifications.</li>
+                  <li>• Conducted and reverse-engineered 3D scans to produce custom, one-off solutions to meet customer needs.</li>
+                  <li>• Utilized CFD analysis to validate the effectiveness of designs.</li>
+                  <li>• Maintained a fleet of 3D printers and created standard operating procedure documents for equipment use, maintenance, and best practices.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-white">Freelance CAD Designer</h3>
+                <p className="text-blue-300">Fiverr.com</p>
+                <p className="text-gray-400">May 2022 – Present</p>
+                <ul className="mt-2 space-y-1 text-gray-300">
+                  <li>• Worked with customers to produce original CAD designs for prototyping and production.</li>
+                  <li>• Received requirements and interfaces in various forms to create drop-in replacement parts for existing applications.</li>
+                  <li>• Managed time effectively to deliver all ongoing projects at or before agreed upon delivery date.</li>
                 </ul>
               </div>
 
@@ -106,9 +118,10 @@ export default function ResumePage() {
             <div className="space-y-6">
               
               <div>
-                <h3 className="text-xl font-semibold text-white">Foil Bearing Endurance and Analysis Rig – Capstone (Sponsored by Honeywell)</h3>
+                <h3 className="text-xl font-semibold text-white">Foil Bearing Endurance Testing Rig – Capstone Project (Sponsored by Honeywell)</h3>
                 <ul className="mt-2 space-y-1 text-gray-300">
-                  <li>• Designing a test rig to evaluate wear on foil bearings for use in auxiliary power units (APUs).</li>
+                  <li>• Responsible for designing a test rig to evaluate wear on foil bearings for use in auxiliary power units.</li>
+                  <li>• Create mathematical and computer models using Matlab and ANSYS Fluent.</li>
                   <li>• Collaborate with a team of seven to evaluate project requirements, scope, and produce a viable product within budget.</li>
                 </ul>
               </div>

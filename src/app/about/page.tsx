@@ -21,7 +21,7 @@ export default function AboutPage() {
             Hey, I&apos;m Ben 👋
           </div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Mechanical Engineering Student | Builder | Problem Solver
+            Mechanical Engineer | Builder | Problem Solver
           </p>
         </motion.div>
 

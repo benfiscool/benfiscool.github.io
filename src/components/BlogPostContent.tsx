@@ -111,7 +111,7 @@ export default function BlogPostContent({ post, postId }: BlogPostContentProps) 
               </div>
               <div>
                 <p className="text-white font-semibold text-sm sm:text-base">Benjamin Freeman</p>
-                <p className="text-gray-400 text-xs sm:text-sm">Mechanical Engineering Student</p>
+                <p className="text-gray-400 text-xs sm:text-sm">Mechanical Engineer</p>
               </div>
             </div>
           </div>
@@ -142,7 +142,7 @@ export default function BlogPostContent({ post, postId }: BlogPostContentProps) 
               <div>
                 <h3 className="text-white font-bold text-base sm:text-lg">Benjamin Freeman</h3>
                 <p className="text-gray-400 text-sm sm:text-base">
-                  Senior Mechanical Engineering Student at Embry-Riddle, 
+                  Mechanical Engineer at Embry-Riddle, 
                   specializing in jet propulsion systems.
                 </p>
               </div>
